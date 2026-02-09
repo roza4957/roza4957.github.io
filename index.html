@@ -1,235 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Omurice炸黑輪 | Linktree</title>
-    <!-- Favicon -->
-    <link rel="icon" href="https://avatars0.githubusercontent.com/u/58869699" type="image/x-icon" />
-    <!-- Font Awesome icons -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.7.2/css/all.css">
-    <!-- https://fontawesome.com/v6/icons -->
-    <!-- Core theme CSS -->
+    <title>Omurice炸黑輪</title>
     <link rel="stylesheet" href="style.css">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    <!-- social verify -->
     <link rel="me" href="https://baraag.net/@omurice_kun">
     <link rel="me" href="https://www.threads.net/@omurice.art">
     <link rel="me" href="https://misskey.io/@omurice_kun">
-  </head>
-
-  <body>
-    <!-- Parallax Pixel Background Animation -->
-    <section class="animated-background">
-      <div id="stars1"></div>
-      <div id="stars2"></div>
-      <div id="stars3"></div>
-    </section>
-    <!-- End of Parallax Pixel Background Animation -->
-
-    <a id="profilePicture" href="#popup">
-      <img src="https://avatars0.githubusercontent.com/u/58869699" alt="Profile Picture">
-    </a>
-
-    <div class="overlay" id="popup">
-      <div class="popup">
-        <div class="popup-photo">
-          <a href="https://avatars0.githubusercontent.com/u/58869699" target="_blank">
-            <img src="https://avatars0.githubusercontent.com/u/58869699" alt="Profile Picture">
-          </a>
-        </div>
-        <div class="popup-quote">
-          ❤️❤️❤️
-        </div>
-        <a class="popup-close" onclick="history.back()">&times;</a>
+</head>
+<body>
+  <div class="language-toggle">
+    <label class="switch">
+      <input type="checkbox" id="language-checkbox">
+      <span class="slider"></span>
+    </label>
+  </div>
+  <div class="container">
+    <!-- Name and Profile Pic -->
+    <div class="card profile">
+      <img src="/images/Profile.png" alt="Profile picture">
+      <div>
+        <h1>Omurice炸黑輪</h1>
       </div>
     </div>
+      <details class="animated">
+        <summary data-i18n="enjoy_summary">789</summary>
+        <div class="details-content">
 
-    <div id="userName">
-      Omurice炸黑輪
-    </div>
+        </div>
+      </details>
+      <div class="spacer"></div>
+      <details class="animated">
+        <summary data-i18n="hate_summary">123</summary>
+        <div class="details-content">
 
-    <div class="links">
-      <a class="link" href="https://www.omurice-kun.com/commission" target="_blank">
-        <i class="fas fa-info">&nbsp;</i>Commissions
-      </a>
+        </div>
+      </details>
+      <div class="spacer"></div>
+    <!-- Gallery Section -->
+    <div class="card gallery">
+      <h2 data-i18n="gallery_title"></h2>
+        <details class="animated">
+          <summary data-i18n="char_details_summary"></summary>
+          <div class="details-content">
+
+          </div>
+        </details>
+        <div class="gallery-grid">
+          <img src="/images/MarboReference.jpg" alt="Character Sheet" 
+            data-name="Character Sheet" 
+            data-desc="Omurice炸黑輪" 
+            data-link="https://links.omurice-kun.com/">
+        </div>
+        <div class="show-more-container">
+          <a href="https://google.com" target="_blank" class="show-more-btn" data-i18n="show_more"></a>
+        </div>
     </div>
-    
-    <div class="sectionGroupContainer">
-      <div class="sectionGroup">
-        <div class="topic">
-          Social Media
-        </div>
-        
-        <div class="links">
-          <a class="link" href="https://twitter.com/yoyo091600" target="_blank">
-            <i class="fa-brands fa-x-twitter">&nbsp;</i>X (Twitter)
-          </a>
-          <a class="link" href="https://bsky.app/profile/omurice-kun.com" target="_blank">
-            <i class="fa-brands fa-bluesky">&nbsp;</i>Bluesky
-          </a>
-          <a class="link" href="https://www.instagram.com/omurice.art" target="_blank">
-            <i class="fa-brands fa-instagram">&nbsp;</i>Instagram
-          </a>
-          <a class="link" href="https://fb.com/omurice.kun.art" target="_blank">
-            <i class="fa-brands fa-facebook">&nbsp;</i>Facebook
-          </a>
-          <a class="link" href="https://www.threads.com/@omurice.art" target="_blank">
-            <i class="fa-brands fa-threads">&nbsp;</i>Threads
-          </a>
-          <a class="link" href="https://misskey.io/@omurice_kun" target="_blank">
-            <img src="icons/misskey.svg" alt="Logo" class="logo-icon">misskey.io 🔞
-          </a>
-          <a class="link" href="https://baraag.net/@omurice_kun" target="_blank">
-            <i class="fa-brands fa-mastodon">&nbsp;</i>baraag.net 🔞
-          </a>
-          <a class="link" href="https://www.youtube.com/@omu_kun" target="_blank">
-            <i class="fa-brands fa-youtube">&nbsp;</i>Youtube
-          </a>
-          <a class="link" href="https://twitch.tv/omu_kun" target="_blank">
-            <i class="fa-brands fa-twitch">&nbsp;</i>Twitch
-          </a>
-        </div>
+    <!-- Lightbox Modal with Arrows and Caption -->
+    <div id="lightbox" class="lightbox">
+      <span class="close">&times;</span>
+      <span class="arrow left">&#10094;</span>
+      <span class="arrow right">&#10095;</span>
+      <img class="lightbox-img" src="" alt="Artwork">
+      <div class="lightbox-caption">
+        <strong class="art-name"></strong><br>
+        <span class="art-desc"></span>
       </div>
     </div>
-
-    <div class="sectionGroupContainer">
-      <div class="sectionGroup">
-        <div class="topic">
-          Art Gallery
-        </div>
-
-        <div class="links">
-          <a class="link" href="https://pixiv.me/roza4957" target="_blank">
-            <i class="fa-brands fa-pixiv">&nbsp;</i>Pixiv 🔞
-          </a>
-          <a class="link" href="https://omurice.fanbox.cc" target="_blank">
-            <img src="icons/fanbox.svg" alt="Logo" class="logo-icon">FANBOX 🔞
-          </a>
-          <a class="link" href="https://fantia.jp/omurice" target="_blank">
-            <img src="icons/fantia.svg" alt="Logo" class="logo-icon">Fantia 🔞
-          </a>
-        </div>
-      </div>
+    <!-- Contact -->
+    <div class="card contact">
+      <h2 data-i18n="contact_title"></h2>
+      <p data-i18n="contact_desc"></p>
+      <a href="mailto:omurice@omurice-kun.com" data-i18n="contact_email"></a>
     </div>
-
-    <div class="sectionGroupContainer">
-      <div class="sectionGroup">
-        <div class="topic">
-          Community
-        </div>
-
-        <div class="links">
-          <a class="link" href="https://discord.omurice-kun.com/" target="_blank">
-            <i class="fa-brands fa-discord">&nbsp;</i>Discord
-          </a>
-          <a class="link" href="https://chat.omurice-kun.com/" target="_blank">
-            <i class="fa-brands fa-rocketchat">&nbsp;</i>rocket.chat 🔞
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="sectionGroupContainer">
-      <div class="sectionGroup">
-        <div class="topic">
-          Podcast
-        </div>
-
-        <div class="links">
-          <a class="link" href="https://www.youtube.com/@omu_kun/podcasts" target="_blank">
-            <i class="fa-brands fa-youtube">&nbsp;</i>Youtube
-          </a>
-          <a class="link" href="https://open.spotify.com/show/2ozzt55pxhWCp4QbvlWy1K?si=e-UpJTvQQGCEe24pu_mW6g" target="_blank">
-            <i class="fa-brands fa-spotify">&nbsp;</i>Spotify
-          </a>
-          <a class="link" href="https://podcasts.apple.com/us/podcast/%E4%BB%8A%E5%A4%A9%E4%B8%8D%E7%95%AB%E7%95%AB-%E4%B8%80%E8%B5%B7%E4%BE%86%E8%AB%87%E7%95%AB/id1836778645" target="_blank">
-            <i class="fa-brands fa-apple">&nbsp;</i>Apple Podcast
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="sectionGroupContainer">
-      <div class="sectionGroup">
-        <div class="topic">
-          Products
-        </div>
-
-        <div class="links">
-          <a class="link" href="https://omurice-kun.booth.pm/items/7323264" target="_blank">
-            <i class="fa-solid fa-house">&nbsp;</i>Pudding (VRChat model)
-          </a>
-          <a class="link" href="https://shop.omurice-kun.com/" target="_blank">
-            <i class="fas fa-vector-square">&nbsp;</i>Official Shop!
-          </a>
-          <a class="link" href="https://pillow.omurice-kun.com/" target="_blank">
-            <i class="fas fa-bed">&nbsp;</i>Body Pillow
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="sectionGroupContainer">
-      <div class="sectionGroup">
-        <div class="topic">
-          Contact Me!
-        </div>
-
-        <div class="links">
-          <a class="link" href="https://twitter.com/messages/compose?recipient_id=1103173649580748800" target="_blank">
-            <i class="fa-brands fa-x-twitter">&nbsp;</i>DM me on X (Twitter)
-          </a>
-          <a class="link" href="mailto:omurice@omurice-kun.com" target="_blank">
-            <i class="fas fa-envelope">&nbsp;</i>e-mail me
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div id="hashtag">
-      ❤️❤️❤️
-    </div>
-
-    <script>
-
-      const stars1 = []
-      const stars2 = []
-      const stars3 = []
-
-      const numberOfStars1 = '1000'
-      const numberOfStars2 = '600'
-      const numberOfStars3 = '100'
-
-
-      for (let i = 0; i < numberOfStars1; i++) {
-        const pos1 = (Math.floor(Math.random() * 5200))
-        const pos2 = (Math.floor(Math.random() * 5200))
-        stars1.push(`${pos1}px ${pos2}px #fff`)
-      }
-
-      for (let i = 0; i < numberOfStars2; i++) {
-        const pos1 = (Math.floor(Math.random() * 5200))
-        const pos2 = (Math.floor(Math.random() * 5200))
-        stars2.push(`${pos1}px ${pos2}px #fff`)
-      }
-
-      for (let i = 0; i < numberOfStars3; i++) {
-        const pos1 = (Math.floor(Math.random() * 5200))
-        const pos2 = (Math.floor(Math.random() * 5200))
-        stars3.push(`${pos1}px ${pos2}px #fff`)
-      }
-
-      const addCSS = css => document.head.appendChild(document.createElement("style")).innerHTML = css;
-
-      addCSS(`#stars1{ box-shadow:${stars1}}`)
-      addCSS(`#stars1:after{ box-shadow:${stars1}}`)
-
-      addCSS(`#stars2{ box-shadow:${stars2}}`)
-      addCSS(`#stars2:after{ box-shadow:${stars2}}`)
-
-      addCSS(`#stars3{ box-shadow:${stars3}}`)
-      addCSS(`#stars3:after{ box-shadow:${stars3}}`)
-
-    </script>
-
-  </body>
+    <footer>
+      <span data-i18n="footer"></span>
+    </footer>
+  </div>
+  <script src="/translations.js"></script>
+  <script src="/script.js"></script>
+</body>
 </html>
