@@ -5,6 +5,10 @@
   --text: #FFFFFF;
   --accent: #788ABA;
   --border: #001E4C;
+  --overlay-bg: rgba(0, 0, 0, 0.6);
+  --panel-bg: rgba(48, 53, 72, 0.9);
+  --panel-bg-strong: rgba(48, 53, 72, 1);
+  --panel-bg-menu: rgba(48, 53, 72, 0.95);
   /* 0.825 is the aspect-ratio of the background image */
   --bg-image-height: calc(100svw * 0.825);
 }
@@ -69,13 +73,13 @@ body {
   font-size: 1.2rem;
   line-height: 1;
   cursor: pointer;
-  background: rgba(48, 53, 72, 0.9);
+  background: var(--panel-bg);
   border: 1px solid var(--border);
   border-radius: 999px;
 }
 
 .language-selected:hover {
-  background: rgba(48, 53, 72, 1);
+  background: var(--panel-bg-strong);
 }
 
 .language-selected:focus-visible {
@@ -102,7 +106,7 @@ body {
   list-style: none;
   margin: 0;
   padding: 0.3rem 0;
-  background: rgba(48, 53, 72, 0.95);
+  background: var(--panel-bg-menu);
   border: 1px solid var(--border);
   border-radius: 12px;
   min-width: max-content;
@@ -329,7 +333,8 @@ body {
 }
 
 /* Commission lightbox */
-.commission-lightbox {
+.commission-lightbox,
+.popup-overlay {
   position: fixed;
   inset: 0;
   padding: 1.5rem;
@@ -338,11 +343,13 @@ body {
   display: none;
   align-items: center;
   justify-content: center;
+}
+
+.commission-lightbox {
   z-index: 120;
 }
 
-.commission-lightbox[open],
-.commission-lightbox.is-open {
+.commission-lightbox[open] {
   display: flex;
 }
 
@@ -480,14 +487,6 @@ body {
 
 /* Popup */
 .popup-overlay {
-  position: fixed;
-  inset: 0;
-  padding: 1.5rem;
-  border: none;
-  background: transparent;
-  display: none;
-  align-items: center;
-  justify-content: center;
   z-index: 250;
 }
 
@@ -523,7 +522,8 @@ body {
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.popup-action:hover {
+.popup-action:hover,
+.back-to-top-button:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
@@ -544,11 +544,6 @@ body {
   font-weight: 700;
   cursor: pointer;
   transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.back-to-top-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 /* Footer */
@@ -579,9 +574,8 @@ footer {
 }
 
 .commission-lightbox::backdrop,
-.commission-lightbox.is-open,
 .popup-overlay::backdrop {
-  background: rgba(0, 0, 0, 0.6);
+  background: var(--overlay-bg);
 }
 
 .popup-message-source,
