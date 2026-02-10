@@ -1,6 +1,10 @@
 // Language state
 let currentLanguage = localStorage.getItem("language") || "en";
 
+function setBodyScrollLocked(isLocked) {
+  document.body.style.overflow = isLocked ? "hidden" : "";
+}
+
 // Translation function
 function t(key) {
   return translations[currentLanguage][key] || translations.en[key] || key;
@@ -59,6 +63,7 @@ function updateLanguageDropdown() {
 
 if (languageSelect && languageButton && languageOptions) {
   updateLanguageDropdown();
+  languageSelect.classList.toggle("is-open", false);
 
   languageButton.addEventListener("click", (e) => {
     e.stopPropagation();
@@ -280,17 +285,17 @@ if (backToTopButton) {
 }
 
 // Commission lightbox
-const commissionItems = Array.from(document.querySelectorAll(".commission-item"));
 const lightboxOverlay = document.getElementById("commission-lightbox");
 const lightboxClose = lightboxOverlay?.querySelector(".lightbox-close");
 const lightboxContentSlot = lightboxOverlay?.querySelector(".lightbox-content-slot");
+const commissionGrid = document.querySelector(".commission-grid");
 
 function openCommissionLightbox(contentHtml) {
   if (!lightboxOverlay || !lightboxContentSlot) return;
   lightboxContentSlot.innerHTML = contentHtml || "";
   if (typeof lightboxOverlay.showModal === "function") {
     lightboxOverlay.showModal();
-    document.body.style.overflow = "hidden";
+    setBodyScrollLocked(true);
   }
 }
 
@@ -298,21 +303,25 @@ function closeCommissionLightbox() {
   if (!lightboxOverlay) return;
   if (typeof lightboxOverlay.close === "function" && lightboxOverlay.open) {
     lightboxOverlay.close();
-    document.body.style.overflow = "";
+    setBodyScrollLocked(false);
   }
 }
 
-if (commissionItems.length && lightboxOverlay) {
-  commissionItems.forEach(item => {
-    item.addEventListener("click", () => {
-      const content = item.querySelector(".lightbox-content");
-      openCommissionLightbox(content?.innerHTML || "");
-    });
+if (commissionGrid && lightboxOverlay) {
+  commissionGrid?.addEventListener("click", e => {
+    const item = e.target.closest(".commission-item");
+    if (!item) return;
+    const content = item.querySelector(".lightbox-content");
+    openCommissionLightbox(content?.innerHTML || "");
   });
 
   lightboxClose?.addEventListener("click", closeCommissionLightbox);
   lightboxOverlay.addEventListener("click", e => {
     if (e.target === lightboxOverlay) closeCommissionLightbox();
+  });
+
+  lightboxOverlay.addEventListener("close", () => {
+    setBodyScrollLocked(false);
   });
 }
 
@@ -330,7 +339,7 @@ function openPopup(linkHref, message) {
   popupMessage.textContent = message || "";
   if (typeof popupOverlay.showModal === "function") {
     popupOverlay.showModal();
-    document.body.style.overflow = "hidden";
+    setBodyScrollLocked(true);
   }
 }
 
@@ -358,6 +367,6 @@ if (popupLinks.length && popupOverlay && popupClose && popupWindow) {
   });
 
   popupOverlay.addEventListener("close", () => {
-    document.body.style.overflow = "";
+    setBodyScrollLocked(false);
   });
 }
