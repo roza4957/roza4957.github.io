@@ -258,6 +258,7 @@ if (popupLinks.length && popupOverlay && popupClose && popupWindow) {
   });
 
   popupClose.addEventListener("click", closePopup);
+  popupAction.addEventListener("click", closePopup);
   popupOverlay.addEventListener("click", e => {
     if (e.target === popupOverlay) closePopup();
   });
