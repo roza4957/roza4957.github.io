@@ -1,0 +1,16 @@
+{
+  "images": [
+    {
+      "src": "/images/merch/merch1.png",
+      "alt": "merch image 1"
+    },
+    {
+      "src": "/images/merch/merch2.png",
+      "alt": "merch image 2"
+    },
+    {
+      "src": "/images/merch/merch3.png",
+      "alt": "merch image 3"
+    }
+  ]
+}

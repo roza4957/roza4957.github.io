@@ -260,6 +260,117 @@ input:checked + .slider::before {
   margin-top: 0.25rem;
 }
 
+/* Announcement gallery */
+.loop-gallery {
+  margin-top: 0.5rem;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid var(--border);
+  background: var(--bg);
+  position: relative;
+}
+
+.loop-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 0;
+  transform: translateX(0);
+  z-index: 1;
+}
+
+.loop-image.is-active {
+  opacity: 1;
+}
+
+.loop-image.slide-in-next,
+.loop-image.slide-in-prev,
+.loop-image.slide-out-next,
+.loop-image.slide-out-prev {
+  animation-duration: 400ms;
+  animation-timing-function: ease;
+}
+
+.loop-image.slide-in-next {
+  --slide-from: 12%;
+  animation-name: loop-slide-in;
+}
+
+.loop-image.slide-in-prev {
+  --slide-from: -12%;
+  animation-name: loop-slide-in;
+}
+
+.loop-image.slide-out-next {
+  --slide-to: -12%;
+  animation-name: loop-slide-out;
+}
+
+.loop-image.slide-out-prev {
+  --slide-to: 12%;
+  animation-name: loop-slide-out;
+}
+
+@keyframes loop-slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(var(--slide-from, 0));
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes loop-slide-out {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(var(--slide-to, 0));
+  }
+}
+
+.loop-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  border: 0;
+  background: rgba(0, 0, 0, 0.45);
+  color: var(--text);
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s, color 0.2s, background 0.2s;
+  z-index: 2;
+}
+
+.loop-arrow:hover {
+  color: var(--accent);
+  background: rgba(0, 0, 0, 0.6);
+  transform: translateY(-50%) scale(1.05);
+}
+
+.loop-arrow-left {
+  left: 0.5rem;
+}
+
+.loop-arrow-right {
+  right: 0.5rem;
+}
+
 /* Popup */
 .popup-overlay {
   position: fixed;
@@ -326,6 +437,29 @@ input:checked + .slider::before {
 
 .popup-message-source {
   display: none;
+}
+
+/* Back to Top */
+.back-to-top {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.back-to-top-button {
+  padding: 0.6rem 1.4rem;
+  background: var(--accent);
+  color: var(--bg);
+  border: 2px solid var(--border);
+  border-radius: 999px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.back-to-top-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 /* Footer */

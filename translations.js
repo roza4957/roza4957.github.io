@@ -8,6 +8,7 @@ const translations = {
     topic_commission: "Commission Info",
     topic_merch: "New Merch",
     topic_announcement: "Announcement",
+    back_to_top: "Back to Top",
     popup_take_me_there: "Take me there!",
     popup_x_message: "You are about to open X (Twitter) in a new tab.",
     popup_bluesky_message: "You are about to open Bluesky in a new tab.",
@@ -26,5 +27,7 @@ const translations = {
     popup_fanbox_message: "You are about to open FANBOX in a new tab.",
     popup_fantia_message: "You are about to open Fantia in a new tab."
   },
-  zh: {}
+  zh: {
+    back_to_top: "回到頂端"
+  }
 };

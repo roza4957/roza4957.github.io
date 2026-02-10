@@ -1,0 +1,16 @@
+{
+  "images": [
+    {
+      "src": "/images/announcement/temp1.png",
+      "alt": "Announcement image 1"
+    },
+    {
+      "src": "/images/announcement/temp2.png",
+      "alt": "Announcement image 2"
+    },
+    {
+      "src": "/images/announcement/temp3.png",
+      "alt": "Announcement image 3"
+    }
+  ]
+}
