@@ -39,5 +39,8 @@ const translations = {
   },
   zh: {
     back_to_top: "回到頂端"
+  },
+  jp: {
+    back_to_top: "トップへ戻る"
   }
 };

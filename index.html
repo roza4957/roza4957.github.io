@@ -24,11 +24,16 @@
 <body>
   <div class="bg-img"></div>
   <div class="bg-gradient"></div>
-  <div class="language-toggle">
-    <label class="switch">
-      <input type="checkbox" id="language-checkbox">
-      <span class="slider"></span>
-    </label>
+  <div class="language-select" id="language-select" role="listbox">
+    <button type="button" class="language-selected" id="language-selected">
+      <span class="language-flag"></span>
+      <span class="language-caret">▾</span>
+    </button>
+    <ul class="language-options" id="language-options">
+      <li role="option" data-value="en">🇺🇸 English (US)</li>
+      <li role="option" data-value="zh">🇹🇼 中文（台灣）</li>
+      <li role="option" data-value="jp">🇯🇵 日本語</li>
+    </ul>
   </div>
   <div class="container">
     <!-- Logo -->
@@ -153,10 +158,10 @@
     </div>
     <div class="card">
       <div class="loop-gallery" data-source="/data/merch.json">
-        <button type="button" class="loop-arrow loop-arrow-left" aria-label="Previous image">&#10094;</button>
+        <button type="button" class="loop-arrow loop-arrow-left">&#10094;</button>
           <img class="loop-image is-active" alt="loop image 1">
           <img class="loop-image" alt="loop image 2">
-        <button type="button" class="loop-arrow loop-arrow-right" aria-label="Next image">&#10095;</button>
+        <button type="button" class="loop-arrow loop-arrow-right">&#10095;</button>
       </div>
     <div class="social-icons merch-links">
       <a href="https://omurice-kun.booth.pm" target="_blank" rel="noopener noreferrer" title="BOOTH" class="popup-link">
@@ -182,10 +187,10 @@
     </div>
     <div class="card">
       <div class="loop-gallery" data-source="/data/announcement.json">
-        <button type="button" class="loop-arrow loop-arrow-left" aria-label="Previous image">&#10094;</button>
+        <button type="button" class="loop-arrow loop-arrow-left">&#10094;</button>
           <img class="loop-image is-active" alt="loop image 1">
           <img class="loop-image" alt="loop image 2">
-        <button type="button" class="loop-arrow loop-arrow-right" aria-label="Next image">&#10095;</button>
+        <button type="button" class="loop-arrow loop-arrow-right">&#10095;</button>
       </div>
     </div>
     <div class="back-to-top">
@@ -201,9 +206,9 @@
       </span>
     </footer>
   </div>
-  <div id="popup-overlay" class="popup-overlay" aria-hidden="true">
-    <div class="popup-window" role="dialog" aria-modal="true" aria-labelledby="popup-message">
-      <button type="button" class="popup-close" aria-label="Close popup">&times;</button>
+  <div id="popup-overlay" class="popup-overlay">
+    <div class="popup-window" role="dialog">
+      <button type="button" class="popup-close">&times;</button>
       <p id="popup-message" class="popup-message"></p>
       <div class="popup-actions">
         <a data-i18n="popup_take_me_there" class="popup-action" href="#" target="_blank" rel="noopener noreferrer">Take me there</a>

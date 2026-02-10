@@ -34,16 +34,61 @@ function updatePageLanguage() {
   });
 }
 
-// Language toggle setup
-const languageCheckbox = document.getElementById("language-checkbox");
-languageCheckbox.checked = currentLanguage === "zh";
-languageCheckbox.addEventListener("change", () => {
-  currentLanguage = languageCheckbox.checked ? "zh" : "en";
+// Language dropdown setup
+const languageFlags = { en: "🇺🇸", zh: "🇹🇼", jp: "🇯🇵" };
+const supportedLanguages = ["en", "zh", "jp"];
+const languageSelect = document.getElementById("language-select");
+const languageButton = document.getElementById("language-selected");
+const languageOptions = document.getElementById("language-options");
+const languageFlag = languageButton?.querySelector(".language-flag");
+
+if (!supportedLanguages.includes(currentLanguage)) {
+  currentLanguage = "en";
   localStorage.setItem("language", currentLanguage);
-  updatePageLanguage();
-});
+}
+
+function updateLanguageDropdown() {
+  if (languageFlag) languageFlag.textContent = languageFlags[currentLanguage] || languageFlags.en;
+  if (languageOptions) {
+    languageOptions.querySelectorAll("li").forEach(li => {
+      li.classList.toggle("is-active", li.dataset.value === currentLanguage);
+    });
+  }
+}
+
+if (languageSelect && languageButton && languageOptions) {
+  updateLanguageDropdown();
+
+  languageButton.addEventListener("click", (e) => {
+    e.stopPropagation();
+    languageSelect.classList.toggle("is-open");
+  });
+
+  languageOptions.addEventListener("click", (e) => {
+    const li = e.target.closest("li[data-value]");
+    if (!li) return;
+    const next = li.dataset.value;
+    if (supportedLanguages.includes(next)) {
+      currentLanguage = next;
+      localStorage.setItem("language", currentLanguage);
+      document.documentElement.lang = currentLanguage;
+      updateLanguageDropdown();
+      updatePageLanguage();
+    }
+    languageSelect.classList.remove("is-open");
+  });
+
+  document.addEventListener("click", () => {
+    languageSelect.classList.remove("is-open");
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") languageSelect.classList.remove("is-open");
+  });
+}
 
 // Update page on load
+document.documentElement.lang = currentLanguage;
 updatePageLanguage();
 
 // Loop gallery
@@ -236,14 +281,12 @@ function openPopup(linkHref, message) {
   popupAction.href = linkHref;
   popupMessage.textContent = message || "";
   popupOverlay.classList.add("is-open");
-  popupOverlay.setAttribute("aria-hidden", "false");
   document.body.style.overflow = "hidden";
 }
 
 function closePopup() {
   if (!popupOverlay) return;
   popupOverlay.classList.remove("is-open");
-  popupOverlay.setAttribute("aria-hidden", "true");
   document.body.style.overflow = "";
 }
 
