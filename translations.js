@@ -4,10 +4,10 @@ const translations = {
     social_gallery: "Gallery",
     social_community: "Community",
     topic_about_me: "About Me",
-    tag_line: "32321",
-    topic_commission: "Commission Info",
-    topic_merch: "New Merch",
-    topic_announcement: "Announcement",
+    tag_line: "contact info",
+    topic_commission: "Commission",
+    topic_merch: "Products",
+    topic_announcement: "Announcements",
     back_to_top: "Back to Top",
     popup_take_me_there: "Take me there!",
     popup_x_message: "You are about to open X (Twitter) in a new tab.",
@@ -25,7 +25,13 @@ const translations = {
     popup_rocketchat_message: "You are about to open Rocket.Chat in a new tab.",
     popup_pixiv_message: "You are about to open Pixiv in a new tab.",
     popup_fanbox_message: "You are about to open FANBOX in a new tab.",
-    popup_fantia_message: "You are about to open Fantia in a new tab."
+    popup_fantia_message: "You are about to open Fantia in a new tab.",
+    popup_booth_message: "321",
+    popup_shop_message: "54654",
+    popup_pillow_message: "84948",
+    link_booth: "VRC model",
+    link_shop: "Official Shop",
+    link_pillow: "Body Pillow"
   },
   zh: {
     back_to_top: "回到頂端"
