@@ -199,6 +199,16 @@ function initLoopGallery(gallery) {
   gallery.addEventListener("mouseenter", stopLoop);
   gallery.addEventListener("mouseleave", startLoop);
 
+  gallery.addEventListener("click", e => {
+    if (e.target.closest(".loop-arrow")) return;
+    const image = e.target.closest(".loop-image");
+    if (!image || !loopImages.length) return;
+    const current = loopImages[loopIndex];
+    if (current?.link) {
+      window.open(current.link, "_blank", "noopener");
+    }
+  });
+
   let touchStartX = 0;
   let touchStartY = 0;
   let isSwiping = false;

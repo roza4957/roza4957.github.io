@@ -2,15 +2,18 @@
   "images": [
     {
       "src": "/images/announcement/temp1.png",
-      "alt": "Announcement image 1"
+      "alt": "Announcement image 1",
+      "link": "https://google.com"
     },
     {
       "src": "/images/announcement/temp2.png",
-      "alt": "Announcement image 2"
+      "alt": "Announcement image 2",
+      "link": "https://google.com"
     },
     {
       "src": "/images/announcement/temp3.png",
-      "alt": "Announcement image 3"
+      "alt": "Announcement image 3",
+      "link": "https://google.com"
     }
   ]
 }

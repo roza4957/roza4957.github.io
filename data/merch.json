@@ -2,15 +2,18 @@
   "images": [
     {
       "src": "/images/merch/merch1.png",
-      "alt": "merch image 1"
+      "alt": "merch image 1",
+      "link": "https://google.com"
     },
     {
       "src": "/images/merch/merch2.png",
-      "alt": "merch image 2"
+      "alt": "merch image 2",
+      "link": "https://google.com"
     },
     {
       "src": "/images/merch/merch3.png",
-      "alt": "merch image 3"
+      "alt": "merch image 3",
+      "link": "https://google.com"
     }
   ]
 }
