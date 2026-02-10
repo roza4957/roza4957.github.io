@@ -189,6 +189,7 @@ input:checked + .slider::before {
   transition: transform 0.3s, color 0.3s;
 }
 
+/* Merch links */
 .merch-links {
   gap: 0.5rem;
 }
@@ -202,7 +203,7 @@ input:checked + .slider::before {
 
 .merch-link-text {
   font-size: 0.9rem;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: 0.2px;
 }
 
@@ -277,14 +278,50 @@ input:checked + .slider::before {
   margin-top: 0.25rem;
 }
 
-/* Announcement gallery */
+/* Commission grid */
+.commission-grid {
+  margin-top: 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.commission-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.commission-item img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  border: 0;
+  background: var(--bg);
+}
+
+.commission-label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text);
+  text-align: center;
+}
+
+@media (max-width: 720px) {
+  .commission-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* loop gallery */
 .loop-gallery {
   margin-top: 0.5rem;
   width: 100%;
   aspect-ratio: 16 / 9;
   border-radius: 12px;
   overflow: hidden;
-  border: 2px solid var(--border);
+  border: 0;
   background: var(--bg);
   position: relative;
 }
