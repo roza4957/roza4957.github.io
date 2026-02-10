@@ -31,7 +31,7 @@
     </button>
     <ul class="language-options" id="language-options">
       <li role="option" data-value="en">🇺🇸 English (US)</li>
-      <li role="option" data-value="zh">🇹🇼 中文（正體）</li>
+      <li role="option" data-value="tw">🇹🇼 中文（正體）</li>
       <li role="option" data-value="cn">🇨🇳 中文（简体）</li>
       <li role="option" data-value="jp">🇯🇵 日本語（機械翻訳）</li>
       <li role="option" data-value="kr">🇰🇷 한국어 (기계 번역)</li>
@@ -126,7 +126,7 @@
     <div class="card profile">
       <img src="/images/profile.png" alt="Profile picture">
       <div>
-        <h1>Omurice炸黑輪</h1>
+        <h1>Omurice炸黑輪🍢</h1>
         <p data-i18n="tag_line"></p>
       </div>
     </div>
@@ -139,18 +139,34 @@
         <div class="commission-item">
           <img src="/images/commission/logoRules.png" alt="Commission rules">
           <span class="commission-label" data-i18n="commission_label_rules">Rules</span>
+          <div class="lightbox-content">
+            <h2>Rules</h2>
+            <p>Placeholder text for commission rules.</p>
+          </div>
         </div>
         <div class="commission-item">
           <img src="/images/commission/logoProgress.png" alt="Commission progress">
           <span class="commission-label" data-i18n="commission_label_progress">Progress</span>
+          <div class="lightbox-content">
+            <h2>Progress</h2>
+            <p>Placeholder text for commission progress.</p>
+          </div>
         </div>
         <div class="commission-item">
           <img src="/images/commission/logoDigital.png" alt="Digital commission">
           <span class="commission-label" data-i18n="commission_label_digital">Digital</span>
+          <div class="lightbox-content">
+            <h2>Digital</h2>
+            <p>Placeholder text for digital commissions.</p>
+          </div>
         </div>
         <div class="commission-item">
           <img src="/images/commission/logoPhysical.png" alt="Physical commission">
           <span class="commission-label" data-i18n="commission_label_physical">Physical</span>
+          <div class="lightbox-content">
+            <h2>Physical</h2>
+            <p>Placeholder text for physical commissions.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -208,15 +224,23 @@
       </span>
     </footer>
   </div>
-  <div id="popup-overlay" class="popup-overlay">
-    <div class="popup-window" role="dialog">
+  <dialog id="commission-lightbox" class="commission-lightbox">
+    <div class="lightbox-window">
+      <button type="button" class="lightbox-close">&times;</button>
+      <div class="lightbox-content-slot"></div>
+    </div>
+  </dialog>
+  <dialog id="popup-overlay" class="popup-overlay">
+    <div class="popup-window">
       <button type="button" class="popup-close">&times;</button>
       <p id="popup-message" class="popup-message"></p>
       <div class="popup-actions">
-        <a data-i18n="popup_take_me_there" class="popup-action" href="#" target="_blank" rel="noopener noreferrer">Take me there</a>
+        <a data-i18n="popup_take_me_there" class="popup-action" href="#" target="_blank" rel="noopener noreferrer">
+          Take me there
+        </a>
       </div>
     </div>
-  </div>
+  </dialog>
   <script src="/translations.js"></script>
   <script src="/script.js"></script>
 </body>

@@ -12,8 +12,9 @@ function updatePageLanguage() {
     const key = el.getAttribute("data-i18n");
     const text = t(key);
     
-    // Special handling for footer to support HTML
-    if (key === "footer") {
+    const allowHtml = typeof text === "string" && text.includes("<br>");
+
+    if (allowHtml) {
       el.innerHTML = text;
     } else {
       // Find and replace only the first text node, preserving nested elements
@@ -35,8 +36,8 @@ function updatePageLanguage() {
 }
 
 // Language dropdown setup
-const languageFlags = { en: "🇺🇸", zh: "🇹🇼", cn: "🇨🇳", jp: "🇯🇵", kr: "🇰🇷" };
-const supportedLanguages = ["en", "zh", "cn", "jp", "kr"];
+const languageFlags = { en: "🇺🇸", tw: "🇹🇼", cn: "🇨🇳", jp: "🇯🇵", kr: "🇰🇷" };
+const supportedLanguages = ["en", "tw", "cn", "jp", "kr"];
 const languageSelect = document.getElementById("language-select");
 const languageButton = document.getElementById("language-selected");
 const languageOptions = document.getElementById("language-options");
@@ -278,6 +279,43 @@ if (backToTopButton) {
   });
 }
 
+// Commission lightbox
+const commissionItems = Array.from(document.querySelectorAll(".commission-item"));
+const lightboxOverlay = document.getElementById("commission-lightbox");
+const lightboxClose = lightboxOverlay?.querySelector(".lightbox-close");
+const lightboxContentSlot = lightboxOverlay?.querySelector(".lightbox-content-slot");
+
+function openCommissionLightbox(contentHtml) {
+  if (!lightboxOverlay || !lightboxContentSlot) return;
+  lightboxContentSlot.innerHTML = contentHtml || "";
+  if (typeof lightboxOverlay.showModal === "function") {
+    lightboxOverlay.showModal();
+    document.body.style.overflow = "hidden";
+  }
+}
+
+function closeCommissionLightbox() {
+  if (!lightboxOverlay) return;
+  if (typeof lightboxOverlay.close === "function" && lightboxOverlay.open) {
+    lightboxOverlay.close();
+    document.body.style.overflow = "";
+  }
+}
+
+if (commissionItems.length && lightboxOverlay) {
+  commissionItems.forEach(item => {
+    item.addEventListener("click", () => {
+      const content = item.querySelector(".lightbox-content");
+      openCommissionLightbox(content?.innerHTML || "");
+    });
+  });
+
+  lightboxClose?.addEventListener("click", closeCommissionLightbox);
+  lightboxOverlay.addEventListener("click", e => {
+    if (e.target === lightboxOverlay) closeCommissionLightbox();
+  });
+}
+
 // ===== Social link popup =====
 const popupLinks = Array.from(document.querySelectorAll(".popup-link"));
 const popupOverlay = document.getElementById("popup-overlay");
@@ -290,14 +328,17 @@ function openPopup(linkHref, message) {
   if (!popupOverlay || !popupAction || !popupMessage) return;
   popupAction.href = linkHref;
   popupMessage.textContent = message || "";
-  popupOverlay.classList.add("is-open");
-  document.body.style.overflow = "hidden";
+  if (typeof popupOverlay.showModal === "function") {
+    popupOverlay.showModal();
+    document.body.style.overflow = "hidden";
+  }
 }
 
 function closePopup() {
   if (!popupOverlay) return;
-  popupOverlay.classList.remove("is-open");
-  document.body.style.overflow = "";
+  if (typeof popupOverlay.close === "function" && popupOverlay.hasAttribute("open")) {
+    popupOverlay.close();
+  }
 }
 
 if (popupLinks.length && popupOverlay && popupClose && popupWindow) {
@@ -316,9 +357,7 @@ if (popupLinks.length && popupOverlay && popupClose && popupWindow) {
     if (e.target === popupOverlay) closePopup();
   });
 
-  document.addEventListener("keydown", e => {
-    if (popupOverlay.classList.contains("is-open") && e.key === "Escape") {
-      closePopup();
-    }
+  popupOverlay.addEventListener("close", () => {
+    document.body.style.overflow = "";
   });
 }
