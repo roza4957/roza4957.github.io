@@ -40,7 +40,13 @@ const translations = {
   zh: {
     back_to_top: "回到頂端"
   },
+  cn: {
+    back_to_top: "回到顶端"
+  },
   jp: {
     back_to_top: "トップへ戻る"
+  },
+  kr: {
+    back_to_top: "맨 위로"
   }
 };

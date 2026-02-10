@@ -35,8 +35,8 @@ function updatePageLanguage() {
 }
 
 // Language dropdown setup
-const languageFlags = { en: "🇺🇸", zh: "🇹🇼", jp: "🇯🇵" };
-const supportedLanguages = ["en", "zh", "jp"];
+const languageFlags = { en: "🇺🇸", zh: "🇹🇼", cn: "🇨🇳", jp: "🇯🇵", kr: "🇰🇷" };
+const supportedLanguages = ["en", "zh", "cn", "jp", "kr"];
 const languageSelect = document.getElementById("language-select");
 const languageButton = document.getElementById("language-selected");
 const languageOptions = document.getElementById("language-options");
