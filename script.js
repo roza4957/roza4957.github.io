@@ -113,6 +113,52 @@ document.addEventListener("keydown", e => {
   }
 });
 
+// ===== Social link popup =====
+const popupLinks = Array.from(document.querySelectorAll(".popup-link"));
+const popupOverlay = document.getElementById("popup-overlay");
+const popupClose = popupOverlay?.querySelector(".popup-close");
+const popupAction = popupOverlay?.querySelector(".popup-action");
+const popupMessage = popupOverlay?.querySelector(".popup-message");
+const popupWindow = popupOverlay?.querySelector(".popup-window");
+
+function openPopup(linkHref, message) {
+  if (!popupOverlay || !popupAction || !popupMessage) return;
+  popupAction.href = linkHref;
+  popupMessage.textContent = message || "";
+  popupOverlay.classList.add("is-open");
+  popupOverlay.setAttribute("aria-hidden", "false");
+  document.body.style.overflow = "hidden";
+}
+
+function closePopup() {
+  if (!popupOverlay) return;
+  popupOverlay.classList.remove("is-open");
+  popupOverlay.setAttribute("aria-hidden", "true");
+  document.body.style.overflow = "";
+}
+
+if (popupLinks.length && popupOverlay && popupClose && popupWindow) {
+  popupLinks.forEach(link => {
+    link.addEventListener("click", e => {
+      e.preventDefault();
+      const messageSource = link.querySelector(".popup-message-source");
+      const message = messageSource?.textContent?.trim() || "";
+      openPopup(link.href, message);
+    });
+  });
+
+  popupClose.addEventListener("click", closePopup);
+  popupOverlay.addEventListener("click", e => {
+    if (e.target === popupOverlay) closePopup();
+  });
+
+  document.addEventListener("keydown", e => {
+    if (popupOverlay.classList.contains("is-open") && e.key === "Escape") {
+      closePopup();
+    }
+  });
+}
+
 // Smooth open/close animations for details
 document.querySelectorAll("details.animated").forEach((details) => {
   const summary = details.querySelector("summary");
