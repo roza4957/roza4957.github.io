@@ -1,6 +1,6 @@
 const translations = {
   en: {
-    social_video: "Video",
+    social_video: "Streaming/Podcast",
     social_gallery: "Gallery",
     social_community: "Community",
     topic_about_me: "About Me",
@@ -16,37 +16,15 @@ const translations = {
     popup_threads_message: "You are about to open Threads in a new tab.",
     popup_misskey_message: "You are about to open Misskey in a new tab.",
     popup_baraag_message: "You are about to open Baraag in a new tab.",
-    popup_youtube_message: "You are about to open YouTube in a new tab.",
     popup_twitch_message: "You are about to open Twitch in a new tab.",
+    popup_youtube_message: "You are about to open YouTube in a new tab.",
+    popup_spotify_message: "You are about to open Spotify in a new tab.",
+    popup_apple_podcast_message: "123",
     popup_discord_message: "You are about to open Discord in a new tab.",
     popup_rocketchat_message: "You are about to open Rocket.Chat in a new tab.",
     popup_pixiv_message: "You are about to open Pixiv in a new tab.",
     popup_fanbox_message: "You are about to open FANBOX in a new tab.",
     popup_fantia_message: "You are about to open Fantia in a new tab."
   },
-  zh: {
-    social_video: "影音",
-    social_gallery: "作品集",
-    social_community: "社群",
-    topic_about_me: "關於我",
-    tag_line: "751571",
-    topic_commission: "委託資訊",
-    topic_merch: "周邊快訊",
-    topic_announcement: "近期公告",
-    popup_take_me_there: "帶我去!",
-    popup_x_message: "即將在新分頁開啟 X（Twitter）。",
-    popup_bluesky_message: "即將在新分頁開啟 Bluesky。",
-    popup_instagram_message: "即將在新分頁開啟 Instagram。",
-    popup_facebook_message: "即將在新分頁開啟 Facebook。",
-    popup_threads_message: "即將在新分頁開啟 Threads。",
-    popup_misskey_message: "即將在新分頁開啟 Misskey。",
-    popup_baraag_message: "即將在新分頁開啟 Baraag。",
-    popup_youtube_message: "即將在新分頁開啟 YouTube。",
-    popup_twitch_message: "即將在新分頁開啟 Twitch。",
-    popup_discord_message: "即將在新分頁開啟 Discord。",
-    popup_rocketchat_message: "即將在新分頁開啟 Rocket.Chat。",
-    popup_pixiv_message: "即將在新分頁開啟 Pixiv。",
-    popup_fanbox_message: "即將在新分頁開啟 FANBOX。",
-    popup_fantia_message: "即將在新分頁開啟 Fantia。"
-  }
+  zh: {}
 };
