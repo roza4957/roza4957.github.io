@@ -9,6 +9,8 @@
   --panel-bg: rgba(48, 53, 72, 0.9);
   --panel-bg-strong: rgba(48, 53, 72, 1);
   --panel-bg-menu: rgba(48, 53, 72, 0.95);
+  --loop-dots: rgba(255, 255, 255, 0.4);
+  --loop-dots-hover: rgba(255, 255, 255, 0.7);
   /* 0.825 is the aspect-ratio of the background image */
   --bg-image-height: calc(100svw * 0.825);
 }
@@ -170,6 +172,7 @@ body {
   display: flex;
   gap: 1.5rem;
   justify-content: center;
+  padding-bottom: 1.5rem;
   margin-bottom: 1.5rem;
   margin-top: 2rem;
   flex-wrap: wrap;
@@ -257,7 +260,8 @@ body {
   color: var(--border);
 }
 
-.card {
+.card,
+.card-showcase {
   background: var(--card);
   border: 4px solid var(--border);
   border-top: 4px solid #00000000;
@@ -270,6 +274,10 @@ body {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
   box-shadow: 0 10px 30px var(--card);
+}
+
+.card-showcase {
+  border: 4px solid var(--border);
 }
 
 /* Profile */
@@ -375,10 +383,11 @@ body {
 }
 
 /* loop gallery */
-.loop-gallery {
+.loop-gallery,
+.loop-gallery-showcase {
   margin-top: 0.5rem;
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 1 / 1;
   border-radius: 12px;
   overflow: hidden;
   border: 0;
@@ -386,12 +395,16 @@ body {
   position: relative;
 }
 
+.loop-gallery-showcase {
+  margin-top: 0;
+}
+
 .loop-image {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
   opacity: 0;
   transform: translateX(0);
@@ -483,6 +496,37 @@ body {
 
 .loop-arrow-right {
   right: 0.5rem;
+}
+
+/* Loop gallery pagination dots */
+.loop-dots {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+  z-index: 2;
+}
+
+.loop-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  background: var(--loop-dots);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.loop-dot:hover {
+  background: var(--loop-dots-hover);
+  transform: scale(1.2);
+}
+
+.loop-dot.is-active {
+  background: var(--text);
 }
 
 /* Popup */

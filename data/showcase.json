@@ -1,0 +1,19 @@
+{
+  "images": [
+    {
+      "src": "/images/showcase/showcase1.jpg",
+      "alt": "Showcase image 1",
+      "link": "https://google.com"
+    },
+    {
+      "src": "/images/showcase/showcase2.jpg",
+      "alt": "Showcase image 2",
+      "link": "https://google.com"
+    },
+    {
+      "src": "/images/showcase/showcase3.jpg",
+      "alt": "Showcase image 3",
+      "link": "https://google.com"
+    }
+  ]
+}

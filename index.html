@@ -74,7 +74,7 @@
     <!-- Social Icons Groups -->
     <div class="social-groups">
       <div class="social-icon-group">
-        <span data-i18n="social_community" class="group-label">Community</span>
+        <span data-i18n="social_community" class="group-label"></span>
         <a href="https://discord.omurice-kun.com" target="_blank" rel="noopener noreferrer" title="Discord" class="popup-link">
           <i class="fab fa-discord"></i>
           <span class="popup-message-source" data-i18n="popup_discord_message"></span>
@@ -85,7 +85,7 @@
         </a>
       </div>
       <div class="social-icon-group">
-        <span data-i18n="social_gallery" class="group-label">Gallery</span>
+        <span data-i18n="social_gallery" class="group-label"></span>
         <a href="https://pixiv.me/roza4957" target="_blank" rel="noopener noreferrer" title="Pixiv" class="popup-link">
           <i class="fab fa-pixiv"></i>
           <span class="popup-message-source" data-i18n="popup_pixiv_message"></span>
@@ -100,7 +100,7 @@
         </a>
       </div>
       <div class="social-icon-group">
-        <span data-i18n="social_video" class="group-label">Streaming/Podcast</span>
+        <span data-i18n="social_video" class="group-label"></span>
         <a href="https://twitch.tv/omu_kun" target="_blank" rel="noopener noreferrer" title="Twitch" class="popup-link">
           <i class="fab fa-twitch"></i>
           <span class="popup-message-source" data-i18n="popup_twitch_message"></span>
@@ -119,9 +119,18 @@
         </a>
       </div>
     </div>
+    <!-- showcase -->
+    <div class="card-showcase">
+      <div class="loop-gallery-showcase" data-source="/data/showcase.json">
+        <button type="button" class="loop-arrow loop-arrow-left">&#10094;</button>
+          <img class="loop-image is-active" alt="loop image 1">
+          <img class="loop-image" alt="loop image 2">
+        <button type="button" class="loop-arrow loop-arrow-right">&#10095;</button>
+      </div>
+    </div>
     <!-- Name and Profile Pic -->
     <div class="card-title">
-      <h1 data-i18n="topic_about_me">About Me</h1>
+      <h1 data-i18n="topic_about_me"></h1>
     </div>
     <div class="card profile">
       <img src="/images/profile.png" alt="Profile picture">
@@ -132,13 +141,13 @@
     </div>
     <!-- Commission info -->
     <div class="card-title">
-      <h1 data-i18n="topic_commission">Commission</h1>
+      <h1 data-i18n="topic_commission"></h1>
     </div>
     <div class="card">
       <div class="commission-grid">
         <div class="commission-item">
           <img src="/images/commission/logoRules.png" alt="Commission rules">
-          <span class="commission-label" data-i18n="commission_label_rules">Rules</span>
+          <span class="commission-label" data-i18n="commission_label_rules"></span>
           <div class="lightbox-content">
             <h2>Rules</h2>
             <p>Placeholder text for commission rules.</p>
@@ -146,7 +155,7 @@
         </div>
         <div class="commission-item">
           <img src="/images/commission/logoProgress.png" alt="Commission progress">
-          <span class="commission-label" data-i18n="commission_label_progress">Progress</span>
+          <span class="commission-label" data-i18n="commission_label_progress"></span>
           <div class="lightbox-content">
             <h2>Progress</h2>
             <p>Placeholder text for commission progress.</p>
@@ -154,7 +163,7 @@
         </div>
         <div class="commission-item">
           <img src="/images/commission/logoDigital.png" alt="Digital commission">
-          <span class="commission-label" data-i18n="commission_label_digital">Digital</span>
+          <span class="commission-label" data-i18n="commission_label_digital"></span>
           <div class="lightbox-content">
             <h2>Digital</h2>
             <p>Placeholder text for digital commissions.</p>
@@ -162,7 +171,7 @@
         </div>
         <div class="commission-item">
           <img src="/images/commission/logoPhysical.png" alt="Physical commission">
-          <span class="commission-label" data-i18n="commission_label_physical">Physical</span>
+          <span class="commission-label" data-i18n="commission_label_physical"></span>
           <div class="lightbox-content">
             <h2>Physical</h2>
             <p>Placeholder text for physical commissions.</p>
@@ -172,7 +181,7 @@
     </div>
     <!-- Merch info -->
     <div class="card-title">
-      <h1 data-i18n="topic_merch">Products</h1>
+      <h1 data-i18n="topic_merch"></h1>
     </div>
     <div class="card">
       <div class="loop-gallery" data-source="/data/merch.json">
@@ -185,23 +194,23 @@
       <a href="https://omurice-kun.booth.pm" target="_blank" rel="noopener noreferrer" title="BOOTH" class="popup-link">
         <i class="fa-brands fa-unity"></i>
         <span class="popup-message-source" data-i18n="popup_booth_message"></span>
-        <span class="merch-link-text" data-i18n="link_booth">VRC model</span>
+        <span class="merch-link-text" data-i18n="link_booth"></span>
       </a>
       <a href="https://shop.omurice-kun.com" target="_blank" rel="noopener noreferrer" title="Shop" class="popup-link">
         <i class="fa-solid fa-cart-shopping"></i>
         <span class="popup-message-source" data-i18n="popup_shop_message"></span>
-        <span class="merch-link-text" data-i18n="link_shop">Official Shop</span>
+        <span class="merch-link-text" data-i18n="link_shop"></span>
       </a>
       <a href="https://pillow.omurice-kun.com" target="_blank" rel="noopener noreferrer" title="Body Pillow" class="popup-link">
         <i class="fas fa-bed"></i>
         <span class="popup-message-source" data-i18n="popup_pillow_message"></span>
-        <span class="merch-link-text" data-i18n="link_pillow">Body Pillow</span>
+        <span class="merch-link-text" data-i18n="link_pillow"></span>
       </a>
     </div>
     </div>
     <!-- Announcement -->
     <div class="card-title">
-      <h1 data-i18n="topic_announcement">Announcements</h1>
+      <h1 data-i18n="topic_announcement"></h1>
     </div>
     <div class="card">
       <div class="loop-gallery" data-source="/data/announcement.json">
@@ -212,12 +221,12 @@
       </div>
     </div>
     <div class="back-to-top">
-      <button type="button" class="back-to-top-button" data-i18n="back_to_top">Back to Top</button>
+      <button type="button" class="back-to-top-button" data-i18n="back_to_top"></button>
     </div>
     <footer>
       <span>
         © 2026 Omurice炸黑輪<br>
-        Made by
+        Code by
         <a href="https://nicotine.buzz" target="_blank" rel="noopener noreferrer">salmoooon</a>
         &
         <a href="https://github.com/features/copilot" target="_blank" rel="noopener noreferrer">Github Copilot</a>
@@ -235,9 +244,7 @@
       <button type="button" class="popup-close">&times;</button>
       <p id="popup-message" class="popup-message"></p>
       <div class="popup-actions">
-        <a data-i18n="popup_take_me_there" class="popup-action" href="#" target="_blank" rel="noopener noreferrer">
-          Take me there
-        </a>
+        <a data-i18n="popup_take_me_there" class="popup-action" href="#" target="_blank" rel="noopener noreferrer"></a>
       </div>
     </div>
   </dialog>
