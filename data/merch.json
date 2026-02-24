@@ -1,19 +1,19 @@
 {
   "images": [
     {
-      "src": "/images/merch/merch1.png",
-      "alt": "merch image 1",
-      "link": "https://google.com"
+      "src": "/images/merch/pudding.jpg",
+      "alt": "Pudding VRChat 3D Model",
+      "link": "https://omurice-kun.booth.pm/items/7323264"
     },
     {
-      "src": "/images/merch/merch2.png",
-      "alt": "merch image 2",
-      "link": "https://google.com"
+      "src": "/images/merch/plushie.jpg",
+      "alt": "Mao Plushie",
+      "link": "https://mycraftzone.com/products/mao-plushie-omurice%E7%82%B8%E9%BB%91%E8%BC%AA"
     },
     {
-      "src": "/images/merch/merch3.png",
-      "alt": "merch image 3",
-      "link": "https://google.com"
+      "src": "/images/merch/pillow.jpg",
+      "alt": "Body Pillow",
+      "link": "https://cuddlyoctopus.com/product-tag/partner-omurice"
     }
   ]
 }

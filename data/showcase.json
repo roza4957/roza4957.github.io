@@ -1,19 +1,29 @@
 {
   "images": [
     {
-      "src": "/images/showcase/showcase1.jpg",
-      "alt": "Showcase image 1",
-      "link": "https://google.com"
+      "src": "/images/showcase/aku-mao.jpg",
+      "alt": "Aku and Mao",
+      "link": "https://pixiv.me/roza4957"
     },
     {
-      "src": "/images/showcase/showcase2.jpg",
-      "alt": "Showcase image 2",
-      "link": "https://google.com"
+      "src": "/images/showcase/cat-dog-memo-breakfast.jpg",
+      "alt": "Cat and Dog Memo - Breakfast",
+      "link": "https://www.pixiv.net/artworks/132427250"
     },
     {
-      "src": "/images/showcase/showcase3.jpg",
-      "alt": "Showcase image 3",
-      "link": "https://google.com"
+      "src": "/images/showcase/cat-dog-memo-camping.jpg",
+      "alt": "Cat and Dog Memo - Camping",
+      "link": "https://www.pixiv.net/artworks/129378568"
+    },
+    {
+      "src": "/images/showcase/pudding-yes.jpg",
+      "alt": "Pudding Yes",
+      "link": "https://www.pixiv.net/artworks/140719000"
+    },
+    {
+      "src": "/images/showcase/xmas-2025.jpg",
+      "alt": "Xmas 2025",
+      "link": "https://www.pixiv.net/artworks/139003444"
     }
   ]
 }

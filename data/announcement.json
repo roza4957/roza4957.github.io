@@ -1,19 +1,14 @@
 {
   "images": [
     {
-      "src": "/images/announcement/temp1.png",
-      "alt": "Announcement image 1",
-      "link": "https://google.com"
+      "src": "/images/announcement/podcast.jpg",
+      "alt": "Podcast",
+      "link": "https://www.youtube.com/@omu_kun/podcasts"
     },
     {
-      "src": "/images/announcement/temp2.png",
-      "alt": "Announcement image 2",
-      "link": "https://google.com"
-    },
-    {
-      "src": "/images/announcement/temp3.png",
-      "alt": "Announcement image 3",
-      "link": "https://google.com"
+      "src": "/images/announcement/omuartclub.jpg",
+      "alt": "OmuArtClub",
+      "link": "https://youtube.com/playlist?list=PL72gxi8zz2fnYvzxegfZV4FM4QdUqZaCd"
     }
   ]
 }
