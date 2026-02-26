@@ -1,6 +1,11 @@
 {
   "images": [
     {
+      "src": "/images/announcement/new-site.jpg",
+      "alt": "New Site",
+      "link": "https://omurice-kun.com"
+    },
+    {
       "src": "/images/announcement/podcast.jpg",
       "alt": "Podcast",
       "link": "https://www.youtube.com/@omu_kun/podcasts"
