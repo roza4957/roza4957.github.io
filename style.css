@@ -11,41 +11,16 @@
   --panel-bg-menu: rgba(48, 53, 72, 0.95);
   --loop-dots: rgba(255, 255, 255, 0.4);
   --loop-dots-hover: rgba(255, 255, 255, 0.7);
-  --font-default: "Zen Maru Gothic", "Noto Sans TC", "Noto Sans SC", "Noto Sans JP", "Noto Sans KR", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-en: "Zen Maru Gothic", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-tw: "Zen Maru Gothic", "Noto Sans SC", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-cn: "Noto Sans SC", "Zen Maru Gothic", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-jp: "Noto Sans JP", "Zen Maru Gothic", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-kr: "Noto Sans KR", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font: "Zen Maru Gothic", "Noto Sans TC", "Noto Sans SC", "Noto Sans JP", "Noto Sans KR", system-ui, -apple-system, "Segoe UI", sans-serif;
   /* 0.825 is the aspect-ratio of the background image */
   --bg-image-height: calc(100svw * 0.825);
 }
 
 * {
   box-sizing: border-box;
-  font-family: var(--font-default);
+  font-family: var(--font);
   font-weight: 400;
   font-style: normal;
-}
-
-html[lang="en"] {
-  --font-default: var(--font-en);
-}
-
-html[lang="tw"] {
-  --font-default: var(--font-tw);
-}
-
-html[lang="cn"] {
-  --font-default: var(--font-cn);
-}
-
-html[lang="jp"] {
-  --font-default: var(--font-jp);
-}
-
-html[lang="kr"] {
-  --font-default: var(--font-kr);
 }
 
 body {
