@@ -7,7 +7,10 @@
     <meta http-equiv="refresh" content="0; url=/" />
     <link rel="canonical" href="/" />
     <script>
-      window.location.replace("/");
+      // Don't redirect .well-known requests
+      if (!window.location.pathname.startsWith("/.well-known")) {
+        window.location.replace("/");
+      }
     </script>
   </head>
   <body>
