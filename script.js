@@ -342,6 +342,15 @@ if (commissionGrid && lightboxOverlay) {
   commissionGrid?.addEventListener("click", e => {
     const item = e.target.closest(".commission-item");
     if (!item) return;
+
+    // Handle the progress part
+    const itemLink = item.querySelector("a[href]");
+    if (itemLink) {
+      e.preventDefault();
+      window.open(itemLink.href, "_blank", "noopener");
+      return;
+    }
+
     const content = item.querySelector(".lightbox-content");
     openCommissionLightbox(content?.innerHTML || "");
   });
