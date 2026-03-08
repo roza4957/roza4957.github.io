@@ -2,7 +2,9 @@
 let currentLanguage = localStorage.getItem("language") || "en";
 
 function setBodyScrollLocked(isLocked) {
-  document.body.style.overflow = isLocked ? "hidden" : "";
+  const nextOverflow = isLocked ? "hidden" : "";
+  if (document.body.style.overflow === nextOverflow) return;
+  document.body.style.overflow = nextOverflow;
 }
 
 // Translation function
@@ -318,12 +320,59 @@ if (backToTopButton) {
 // Commission lightbox
 const lightboxOverlay = document.getElementById("commission-lightbox");
 const lightboxClose = lightboxOverlay?.querySelector(".lightbox-close");
+const lightboxAnchorNav = lightboxOverlay?.querySelector(".lightbox-anchor-nav");
 const lightboxContentSlot = lightboxOverlay?.querySelector(".lightbox-content-slot");
 const commissionGrid = document.querySelector(".commission-grid");
+let lastLightboxContentHtml = "";
+
+function getLightboxAnchorLabel(target, index) {
+  const i18nKey = target.getAttribute("data-i18n");
+  if (i18nKey) {
+    return t(i18nKey);
+  }
+
+  const text = (target.textContent || "").replace(/\s+/g, " ").trim();
+  return text || target.id || `#${index + 1}`;
+}
+
+function buildLightboxAnchorNav() {
+  if (!lightboxAnchorNav || !lightboxContentSlot) return;
+
+  lightboxAnchorNav.innerHTML = "";
+
+  const targets = Array.from(lightboxContentSlot.querySelectorAll("[id]"))
+    .filter(el => el.id && el.id.trim());
+
+  if (!targets.length) {
+    lightboxAnchorNav.hidden = true;
+    return;
+  }
+
+  const fragment = document.createDocumentFragment();
+
+  targets.forEach((target, index) => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "lightbox-anchor-btn";
+    button.dataset.targetId = target.id;
+    button.textContent = getLightboxAnchorLabel(target, index);
+    fragment.appendChild(button);
+  });
+
+  lightboxAnchorNav.appendChild(fragment);
+  lightboxAnchorNav.hidden = false;
+}
 
 function openCommissionLightbox(contentHtml) {
   if (!lightboxOverlay || !lightboxContentSlot) return;
-  lightboxContentSlot.innerHTML = contentHtml || "";
+
+  const nextContentHtml = contentHtml || "";
+  if (nextContentHtml !== lastLightboxContentHtml) {
+    lightboxContentSlot.innerHTML = nextContentHtml;
+    buildLightboxAnchorNav();
+    lastLightboxContentHtml = nextContentHtml;
+  }
+
   if (typeof lightboxOverlay.showModal === "function") {
     lightboxOverlay.showModal();
     setBodyScrollLocked(true);
@@ -336,6 +385,25 @@ function closeCommissionLightbox() {
     lightboxOverlay.close();
     setBodyScrollLocked(false);
   }
+}
+
+if (lightboxAnchorNav && lightboxContentSlot) {
+  lightboxAnchorNav.addEventListener("click", e => {
+    const button = e.target.closest(".lightbox-anchor-btn[data-target-id]");
+    if (!button) return;
+
+    const targetId = button.dataset.targetId;
+    if (!targetId) return;
+
+    const safeId = typeof CSS !== "undefined" && typeof CSS.escape === "function"
+      ? CSS.escape(targetId)
+      : targetId.replace(/([ #;?%&,.+*~':"!^$\[\]()=>|/@])/g, "\\$1");
+
+    const target = lightboxContentSlot.querySelector(`#${safeId}`);
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  });
 }
 
 if (commissionGrid && lightboxOverlay) {

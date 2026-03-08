@@ -372,19 +372,64 @@ body {
 
 .lightbox-window {
   width: min(100vw, 700px);
-  max-height: calc(95vh - 3rem);
+  max-height: calc(80vh - 3rem);
   background: var(--card);
   border: 4px solid var(--border);
   border-radius: 16px;
-  padding: 1.5rem 1.5rem 1.75rem;
+  padding: 0.5rem 1.5rem 1.75rem;
   position: relative;
   display: flex;
   flex-direction: column;
+  contain: layout paint;
+}
+
+.lightbox-anchor-nav {
+  display: flex;
+  flex-wrap: nowrap;
+  flex: 0 0 auto;
+  gap: 1rem;
+  width: 100%;
+  margin: 0 0 1rem;
+  padding-right: 3rem;
+  box-sizing: border-box;
+  justify-content: center;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.lightbox-anchor-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.lightbox-anchor-btn {
+  flex: 1 1 0;
+  min-width: 0;
+  border: 0px;
+  background: rgba(120, 138, 186, 0.2);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.lightbox-anchor-btn:hover {
+  background: var(--accent);
+  color: var(--border);
 }
 
 .lightbox-content-slot {
+  flex: 1 1 auto;
+  min-height: 0;
   overflow-y: auto;
-  max-height: 100%;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* Internet Explorer/Edge */
 }
@@ -635,9 +680,6 @@ footer {
 /* Common */
 .lightbox-close,
 .popup-close {
-  position: absolute;
-  top: 0.5rem;
-  right: 0.75rem;
   border: none;
   background: transparent;
   color: var(--text);
@@ -649,6 +691,18 @@ footer {
   -webkit-user-select: none;
   user-select: none;
   outline: none;
+}
+
+.lightbox-close {
+  align-self: flex-end;
+  margin-bottom: -2rem;
+  z-index: 1;
+}
+
+.popup-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.75rem;
 }
 
 .lightbox-close:hover,
