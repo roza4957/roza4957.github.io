@@ -32,6 +32,14 @@ body {
   position: relative;
 }
 
+p, h1, h2, h3, ul, ol, li {
+  color: var(--text);
+}
+
+li::marker {
+  color: var(--text);
+}
+
 .bg-img {
   position: absolute;
   top: 0;
@@ -344,7 +352,6 @@ body {
 .commission-label {
   font-size: 1rem;
   font-weight: 500;
-  color: var(--text);
   text-align: center;
 }
 
@@ -390,8 +397,7 @@ body {
   gap: 1rem;
   width: 100%;
   margin: 0 0 1rem;
-  padding-right: 3rem;
-  box-sizing: border-box;
+  padding-right: 2rem;
   justify-content: center;
   overflow-x: auto;
   scrollbar-width: none;
@@ -415,7 +421,6 @@ body {
   line-height: 1.2;
   text-align: center;
   cursor: pointer;
-  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   transition: background 0.2s ease, color 0.2s ease;
@@ -426,6 +431,17 @@ body {
   color: var(--border);
 }
 
+@media (max-width: 700px) {
+  .lightbox-anchor-nav {
+    flex-wrap: wrap;
+    overflow-x: visible;
+  }
+
+  .lightbox-anchor-btn {
+    flex: 1 1 calc(50% - 0.5rem);
+  }
+}
+
 .lightbox-content-slot {
   flex: 1 1 auto;
   min-height: 0;
@@ -434,29 +450,100 @@ body {
   -ms-overflow-style: none; /* Internet Explorer/Edge */
 }
 
-.lightbox-window-slot::-webkit-scrollbar {
+.lightbox-content-slot::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Edge (Chromium-based) */
 }
 
-.lightbox-content-slot h2 {
-  margin: 0 0 0.5rem;
-  font-size: 1.2rem;
-  color: var(--text);
+.description-gallery {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-top: 1.5rem;
 }
 
-.lightbox-content-slot p {
+.description-gallery .loop-gallery {
+  margin-top: 0;
+  flex: 0 0 50%;
+}
+
+.description-gallery .description-group {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.description-group .price-item {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(120, 138, 186, 0.25);
+  border-radius: 10px;
+  padding: 0.85rem 1rem;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.description-group .price-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--accent);
+}
+
+.description-group .price-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.description-group .price-item-header h3 {
   margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
   color: var(--text);
 }
 
-.lightbox-content-slot ul,
-.lightbox-content-slot ol,
-.lightbox-content-slot li {
-  color: var(--text);
+.description-group .price-tag {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--accent);
+  white-space: nowrap;
+  background: rgba(120, 138, 186, 0.15);
+  padding: 0.2rem 0.65rem;
+  border-radius: 6px;
 }
 
-.lightbox-content-slot li::marker {
-  color: var(--text);
+.description-group .price-desc {
+  margin: 0.35rem 0 0;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.5;
+}
+
+@media (max-width: 700px) {
+  .description-gallery {
+    flex-direction: column;
+  }
+
+  .description-gallery .loop-gallery {
+    flex: none;
+    width: 100%;
+  }
+}
+
+.lightbox-content-slot > img {
+  margin-top: 1rem;
+  width: 100%;
+  border-radius: 12px;
+  border: 0;
+}
+
+.lightbox-content-slot hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.lightbox-content-slot h1 {
+  margin: 0 0 0.5rem;
+  font-weight: 700;
 }
 
 /* loop gallery */
@@ -578,7 +665,7 @@ body {
 /* Loop gallery pagination dots */
 .loop-dots {
   position: absolute;
-  bottom: 1rem;
+  bottom: 0.5rem;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -609,6 +696,122 @@ body {
   background: var(--text);
 }
 
+.loop-desc {
+  position: absolute;
+  top: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.5rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.8);
+  color: var(--text);
+  font-size: 0.85rem;
+  line-height: 1.2;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: calc(100% - 1rem);
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* accordion */
+.accordion-heading {
+  margin: 1.5rem 0 0.75rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.accordion-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.accordion-item {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(120, 138, 186, 0.25);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.accordion-item:hover {
+  border-color: var(--accent);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.accordion-item[open] {
+  border-color: var(--accent);
+}
+
+.accordion-item summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text);
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+
+.accordion-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.accordion-item summary::after {
+  content: "\25B8";
+  font-size: 0.85rem;
+  color: var(--accent);
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+  margin-left: 0.75rem;
+}
+
+.accordion-item[open] > summary::after {
+  transform: rotate(90deg);
+}
+
+.accordion-item[open].is-closing > summary::after {
+  transform: rotate(0deg);
+}
+
+.accordion-item .details-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 250ms ease-in-out;
+}
+
+.accordion-item[open]:not(.is-closing) .details-content {
+  grid-template-rows: 1fr;
+}
+
+.accordion-item .details-inner {
+  overflow: hidden;
+}
+
+.accordion-item .details-inner p {
+  padding: 0 1rem;
+  margin: 0 0 0.4rem;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+}
+
+.accordion-item .details-inner p:first-child {
+  padding-top: 0.15rem;
+}
+
+.accordion-item .details-inner p:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0.75rem;
+}
+
 /* Popup */
 .popup-overlay {
   z-index: 250;
@@ -631,7 +834,6 @@ body {
 .popup-message {
   margin: 0.5rem 0 1.25rem;
   font-size: 1rem;
-  color: var(--text);
 }
 
 .popup-action {
@@ -696,6 +898,7 @@ footer {
 .lightbox-close {
   align-self: flex-end;
   margin-bottom: -2rem;
+  margin-right: -1rem;
   z-index: 1;
 }
 

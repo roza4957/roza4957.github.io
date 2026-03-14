@@ -1,3 +1,5 @@
+const translations = window.translationChunks || {};
+
 // Language state
 let currentLanguage = localStorage.getItem("language") || "en";
 
@@ -9,7 +11,9 @@ function setBodyScrollLocked(isLocked) {
 
 // Translation function
 function t(key) {
-  return translations[currentLanguage][key] || translations.en[key] || key;
+  const current = translations[currentLanguage] || {};
+  const fallback = translations.en || {};
+  return current[key] || fallback[key] || key;
 }
 
 // Update DOM with translations
@@ -110,6 +114,27 @@ function initLoopGallery(gallery) {
   let activeSlotIndex = 0;
   let isTransitioning = false;
   let dots = [];
+  let descOverlay = null;
+
+  function getDescText(imageData) {
+    if (imageData?.desc_translation_key) {
+      return t(imageData.desc_translation_key);
+    }
+    return imageData?.desc || "";
+  }
+
+  function updateDesc() {
+    if (!descOverlay) return;
+    const current = loopImages[loopIndex];
+    const text = getDescText(current);
+    if (text) {
+      descOverlay.textContent = text;
+      descOverlay.hidden = false;
+    } else {
+      descOverlay.textContent = "";
+      descOverlay.hidden = true;
+    }
+  }
 
   function updateDots() {
     dots.forEach((dot, i) => {
@@ -160,6 +185,7 @@ function initLoopGallery(gallery) {
       loopIndex = safeIndex;
       activeSlotIndex = 1 - activeSlotIndex;
       updateDots();
+      updateDesc();
     };
     preload.onerror = () => {
       isTransitioning = false;
@@ -215,6 +241,19 @@ function initLoopGallery(gallery) {
           loopImageSlots[activeSlotIndex].src = first.src;
           loopImageSlots[activeSlotIndex].alt = first.alt || "loop image";
           loopImageSlots[activeSlotIndex].classList.add("is-active");
+
+          // Create desc overlay if any image has a desc
+          if (loopImages.some(img => img.desc || img.desc_translation_key)) {
+            // Remove any existing desc overlays first
+            const existingDesc = gallery.querySelector(".loop-desc");
+            if (existingDesc) existingDesc.remove();
+
+            descOverlay = document.createElement("div");
+            descOverlay.className = "loop-desc";
+            descOverlay.hidden = true;
+            gallery.appendChild(descOverlay);
+            updateDesc();
+          }
 
           if (loopImages.length > 1) {
             const dotsContainer = document.createElement("div");
@@ -317,6 +356,42 @@ if (backToTopButton) {
   });
 }
 
+// Smooth open/close animations for details (CSS-driven via grid-template-rows)
+function initAnimatedDetails(root) {
+  function closeDetails(details) {
+    if (!details.open || details.classList.contains("is-closing")) return;
+    details.classList.add("is-closing");
+    const content = details.querySelector(".details-content");
+    if (!content) { details.open = false; details.classList.remove("is-closing"); return; }
+    content.addEventListener("transitionend", function handler() {
+      content.removeEventListener("transitionend", handler);
+      details.open = false;
+      details.classList.remove("is-closing");
+    });
+  }
+
+  (root || document).querySelectorAll("details.animated").forEach((details) => {
+    const summary = details.querySelector("summary");
+    if (!summary) return;
+
+    summary.addEventListener("click", (e) => {
+      e.preventDefault();
+      if (details.open) {
+        closeDetails(details);
+      } else {
+        // Close siblings
+        const group = details.closest(".accordion-group");
+        if (group) {
+          group.querySelectorAll("details.animated[open]").forEach((other) => {
+            if (other !== details) closeDetails(other);
+          });
+        }
+        details.open = true;
+      }
+    });
+  });
+}
+
 // Commission lightbox
 const lightboxOverlay = document.getElementById("commission-lightbox");
 const lightboxClose = lightboxOverlay?.querySelector(".lightbox-close");
@@ -370,6 +445,8 @@ function openCommissionLightbox(contentHtml) {
   if (nextContentHtml !== lastLightboxContentHtml) {
     lightboxContentSlot.innerHTML = nextContentHtml;
     buildLightboxAnchorNav();
+    lightboxContentSlot.querySelectorAll(".loop-gallery").forEach(initLoopGallery);
+    initAnimatedDetails(lightboxContentSlot);
     lastLightboxContentHtml = nextContentHtml;
   }
 

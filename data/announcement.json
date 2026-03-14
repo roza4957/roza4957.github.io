@@ -2,8 +2,7 @@
   "images": [
     {
       "src": "/images/announcement/new-site.jpg",
-      "alt": "New Site",
-      "link": "https://omurice-kun.com"
+      "alt": "New Site"
     },
     {
       "src": "/images/announcement/podcast.jpg",

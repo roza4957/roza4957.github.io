@@ -162,7 +162,7 @@
           <img src="/images/wip.png" alt="Commission rules">
           <span class="commission-label" data-i18n="commission_label_rules"></span>
           <div class="lightbox-content">
-            <h2 data-i18n="commission_label_rules"></h2>
+            <h1 data-i18n="commission_label_rules"></h1>
             <ul>
               <li data-i18n="rules_1"></li>
               <li data-i18n="rules_2"></li>
@@ -184,8 +184,104 @@
           <img src="/images/wip.png" alt="Digital commission">
           <span class="commission-label" data-i18n="commission_label_digital"></span>
           <div class="lightbox-content">
-            <h2 data-i18n="commission_label_digital"></h2>
-            <p data-i18n="commission_wip"></p>
+            <h1 data-i18n="digital_illustration" id="digital_illustration"></h1>
+            <img src="/images/commission/digital/illustration-header.jpg">
+            <div class="description-gallery">
+              <div class="loop-gallery" data-source="/data/exampleDigitalIllustration.json">
+                <button type="button" class="loop-arrow loop-arrow-left">&#10094;</button>
+                  <img class="loop-image is-active" alt="loop image 1">
+                  <img class="loop-image" alt="loop image 2">
+                <button type="button" class="loop-arrow loop-arrow-right">&#10095;</button>
+              </div>
+              <div class="description-group">
+                <div class="price-item">
+                  <div class="price-item-header">
+                    <h3 data-i18n="profile_pic_topic"></h3>
+                    <span class="price-tag" data-i18n="profile_pic_pricing"></span>
+                  </div>
+                  <p class="price-desc" data-i18n="profile_pic_desc"></p>
+                </div>
+                <div class="price-item">
+                  <div class="price-item-header">
+                    <h3 data-i18n="half_body_topic"></h3>
+                    <span class="price-tag" data-i18n="half_body_pricing"></span>
+                  </div>
+                  <p class="price-desc" data-i18n="half_body_desc"></p>
+                </div>
+                <div class="price-item">
+                  <div class="price-item-header">
+                    <h3 data-i18n="full_body_topic"></h3>
+                    <span class="price-tag" data-i18n="full_body_pricing"></span>
+                  </div>
+                  <p class="price-desc" data-i18n="full_body_desc"></p>
+                </div>
+                <div class="price-item">
+                  <div class="price-item-header">
+                    <h3 data-i18n="background_topic"></h3>
+                    <span class="price-tag" data-i18n="background_pricing"></span>
+                  </div>
+                  <p class="price-desc" data-i18n="background_desc"></p>
+                </div>
+              </div>
+            </div>
+            <h2 data-i18n="illustration_process_topic" class="accordion-heading"></h2>
+            <div class="accordion-group">
+              <details class="animated accordion-item">
+                <summary data-i18n="illustration_process_queue_topic"></summary>
+                <div class="details-content"><div class="details-inner">
+                  <p data-i18n="illustration_process_queue_1"></p>
+                  <p data-i18n="illustration_process_queue_2"></p>
+                  <p data-i18n="illustration_process_queue_3"></p>
+                </div></div>
+              </details>
+              <details class="animated accordion-item">
+                <summary data-i18n="illustration_process_wait_topic"></summary>
+                <div class="details-content"><div class="details-inner">
+                  <p data-i18n="illustration_process_wait_1"></p>
+                  <p data-i18n="illustration_process_wait_2"></p>
+                </div></div>
+              </details>
+              <details class="animated accordion-item">
+                <summary data-i18n="illustration_process_sketch_topic"></summary>
+                <div class="details-content"><div class="details-inner">
+                  <p data-i18n="illustration_process_sketch_1"></p>
+                  <p data-i18n="illustration_process_sketch_2"></p>
+                  <p data-i18n="illustration_process_sketch_3"></p>
+                </div></div>
+              </details>
+              <details class="animated accordion-item">
+                <summary data-i18n="illustration_process_payment_topic"></summary>
+                <div class="details-content"><div class="details-inner">
+                  <p data-i18n="illustration_process_payment_1"></p>
+                  <p data-i18n="illustration_process_payment_2"></p>
+                  <p data-i18n="illustration_process_payment_3"></p>
+                  <p data-i18n="illustration_process_payment_4"></p>
+                  <p data-i18n="illustration_process_payment_5"></p>
+                  <p data-i18n="illustration_process_payment_6"></p>
+                </div></div>
+              </details>
+              <details class="animated accordion-item">
+                <summary data-i18n="illustration_process_drawing_topic"></summary>
+                <div class="details-content"><div class="details-inner">
+                  <p data-i18n="illustration_process_drawing_1"></p>
+                  <p data-i18n="illustration_process_drawing_2"></p>
+                </div></div>
+              </details>
+              <details class="animated accordion-item">
+                <summary data-i18n="illustration_process_finish_topic"></summary>
+                <div class="details-content"><div class="details-inner">
+                  <p data-i18n="illustration_process_finish_1"></p>
+                  <p data-i18n="illustration_process_finish_2"></p>
+                  <p data-i18n="illustration_process_finish_3"></p>
+                </div></div>
+              </details>
+            </div>
+            <hr>
+            <h1 data-i18n="digital_character_design" id="digital_character_design"></h1>
+            <hr>
+            <h1 data-i18n="digital_live2d" id="digital_live2d"></h1>
+            <hr>
+            <h1 data-i18n="digital_sketch" id="digital_sketch"></h1>
           </div>
         </div>
         <div class="commission-item">
@@ -270,7 +366,11 @@
       </div>
     </div>
   </dialog>
-  <script src="/translations.js"></script>
+  <script src="/translations/en.js"></script>
+  <script src="/translations/tw.js"></script>
+  <script src="/translations/cn.js"></script>
+  <script src="/translations/jp.js"></script>
+  <script src="/translations/kr.js"></script>
   <script src="/script.js"></script>
 </body>
 </html>
