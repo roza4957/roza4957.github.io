@@ -474,7 +474,7 @@ if (commissionGrid && lightboxOverlay) {
     if (!item) return;
 
     // Handle the progress part
-    const itemLink = item.querySelector("a[href]");
+    const itemLink = item.querySelector(":scope > a[href]");
     if (itemLink) {
       e.preventDefault();
       window.open(itemLink.href, "_blank", "noopener");
