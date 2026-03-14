@@ -32,14 +32,6 @@ body {
   position: relative;
 }
 
-p, h1, h2, h3, ul, ol, li {
-  color: var(--text);
-}
-
-li::marker {
-  color: var(--text);
-}
-
 .bg-img {
   position: absolute;
   top: 0;
@@ -131,7 +123,6 @@ li::marker {
 .language-options li {
   padding: 0.45rem 1rem;
   font-size: 0.9rem;
-  color: var(--text);
   cursor: pointer;
   white-space: nowrap;
   transition: background 0.15s;
@@ -202,7 +193,6 @@ li::marker {
   top: 0;
   left: 50%;
   transform: translate(-50%, -80%);
-  color: var(--text);
   padding: 0 0.5rem;
   font-size: 1rem;
   font-weight: 700;
@@ -280,7 +270,6 @@ li::marker {
 .card-showcase {
   background: var(--card);
   border: 4px solid var(--border);
-  border-top: 4px solid #00000000;
   border-radius: 16px;
   transform: translateY(-1rem);
   position: relative;
@@ -292,8 +281,8 @@ li::marker {
   box-shadow: 0 10px 30px var(--card);
 }
 
-.card-showcase {
-  border: 4px solid var(--border);
+.card {
+  border-top: 4px solid #00000000;
 }
 
 /* Profile */
@@ -363,6 +352,7 @@ li::marker {
   padding: 0.2rem;
   border: none;
   background: transparent;
+  color: var(--text);
   display: none;
   align-items: center;
   justify-content: center;
@@ -401,11 +391,6 @@ li::marker {
   justify-content: center;
   overflow-x: auto;
   scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-.lightbox-anchor-nav::-webkit-scrollbar {
-  display: none;
 }
 
 .lightbox-anchor-btn {
@@ -446,12 +431,7 @@ li::marker {
   flex: 1 1 auto;
   min-height: 0;
   overflow-y: auto;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* Internet Explorer/Edge */
-}
-
-.lightbox-content-slot::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Edge (Chromium-based) */
+  scrollbar-width: none;
 }
 
 .description-gallery {
@@ -498,7 +478,6 @@ li::marker {
   margin: 0;
   font-size: 1rem;
   font-weight: 700;
-  color: var(--text);
 }
 
 .description-group .price-tag {
@@ -704,7 +683,6 @@ li::marker {
   padding: 0.5rem 0.75rem;
   border-radius: 999px;
   background: rgba(0, 0, 0, 0.8);
-  color: var(--text);
   font-size: 0.85rem;
   line-height: 1.2;
   text-align: center;
@@ -721,7 +699,6 @@ li::marker {
   margin: 1.5rem 0 0.75rem;
   font-size: 1.15rem;
   font-weight: 700;
-  color: var(--text);
 }
 
 .accordion-group {
@@ -754,14 +731,9 @@ li::marker {
   padding: 0.75rem 1rem;
   font-size: 0.95rem;
   font-weight: 700;
-  color: var(--text);
   cursor: pointer;
   list-style: none;
   user-select: none;
-}
-
-.accordion-item summary::-webkit-details-marker {
-  display: none;
 }
 
 .accordion-item summary::after {
@@ -875,7 +847,6 @@ li::marker {
 footer {
   text-align: center;
   margin-top: 3rem;
-  color: var(--text);
   font-size: 0.9rem;
 }
 
@@ -890,7 +861,6 @@ footer {
   padding: 0.25rem;
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
-  -webkit-user-select: none;
   user-select: none;
   outline: none;
 }
