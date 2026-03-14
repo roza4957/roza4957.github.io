@@ -338,11 +338,6 @@ function initLoopGallery(gallery) {
       stopLoop();
       showNextImage();
     });
-
-    loopPrev.addEventListener("mouseenter", stopLoop);
-    loopPrev.addEventListener("mouseleave", startLoop);
-    loopNext.addEventListener("mouseenter", stopLoop);
-    loopNext.addEventListener("mouseleave", startLoop);
   }
 }
 
@@ -450,18 +445,13 @@ function openCommissionLightbox(contentHtml) {
     lastLightboxContentHtml = nextContentHtml;
   }
 
-  if (typeof lightboxOverlay.showModal === "function") {
-    lightboxOverlay.showModal();
-    setBodyScrollLocked(true);
-  }
+  lightboxOverlay.showModal();
+  setBodyScrollLocked(true);
 }
 
 function closeCommissionLightbox() {
-  if (!lightboxOverlay) return;
-  if (typeof lightboxOverlay.close === "function" && lightboxOverlay.open) {
-    lightboxOverlay.close();
-    setBodyScrollLocked(false);
-  }
+  if (!lightboxOverlay || !lightboxOverlay.open) return;
+  lightboxOverlay.close();
 }
 
 if (lightboxAnchorNav && lightboxContentSlot) {
@@ -472,11 +462,7 @@ if (lightboxAnchorNav && lightboxContentSlot) {
     const targetId = button.dataset.targetId;
     if (!targetId) return;
 
-    const safeId = typeof CSS !== "undefined" && typeof CSS.escape === "function"
-      ? CSS.escape(targetId)
-      : targetId.replace(/([ #;?%&,.+*~':"!^$\[\]()=>|/@])/g, "\\$1");
-
-    const target = lightboxContentSlot.querySelector(`#${safeId}`);
+    const target = lightboxContentSlot.querySelector(`#${CSS.escape(targetId)}`);
     if (target) {
       target.scrollIntoView({ behavior: "smooth", block: "start" });
     }
@@ -522,17 +508,13 @@ function openPopup(linkHref, message) {
   if (!popupOverlay || !popupAction || !popupMessage) return;
   popupAction.href = linkHref;
   popupMessage.textContent = message || "";
-  if (typeof popupOverlay.showModal === "function") {
-    popupOverlay.showModal();
-    setBodyScrollLocked(true);
-  }
+  popupOverlay.showModal();
+  setBodyScrollLocked(true);
 }
 
 function closePopup() {
-  if (!popupOverlay) return;
-  if (typeof popupOverlay.close === "function" && popupOverlay.hasAttribute("open")) {
-    popupOverlay.close();
-  }
+  if (!popupOverlay || !popupOverlay.open) return;
+  popupOverlay.close();
 }
 
 if (popupLinks.length && popupOverlay && popupClose && popupWindow) {
