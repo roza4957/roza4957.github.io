@@ -1,6 +1,5 @@
-const translations = window.translationChunks || {};
-
 // Language state
+const translations = window.translationChunks || {};
 let currentLanguage = localStorage.getItem("language") || "en";
 
 function setBodyScrollLocked(isLocked) {
