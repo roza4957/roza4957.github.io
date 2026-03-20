@@ -41,9 +41,6 @@ window.translationChunks.cn = {
   background_topic: "背景",
   background_pricing: "0 TWD ⬆️",
   background_desc: "背景价格取决于复杂度，欢迎咨询！",
-  image_new_site: "新网站说明",
-  image_podcast: "播客说明",
-  image_omuartclub: "Omu Art Club 说明",
   illustration_process_topic: "约稿流程：",
   illustration_process_queue_topic: "1️⃣ 加入等待列表",
   illustration_process_queue_1: "请先查看我的 X (Twitter) 确认目前是否开放约稿名额，并确保您已阅读完所有条款和以下流程！",
@@ -199,5 +196,8 @@ window.translationChunks.cn = {
   popup_pillow_message: "我与 Cuddly Octopus 合作售卖 SFW 与 NSFW 抱枕。NSFW 版本需要联系他们的客服邮箱！",
   link_booth: "VRC 模型",
   link_shop: "官方商店",
-  link_pillow: "等身抱枕"
+  link_pillow: "等身抱枕",
+  image_physical_small: "小尺寸",
+  image_physical_medium: "中尺寸",
+  image_physical_large: "大尺寸"
 };

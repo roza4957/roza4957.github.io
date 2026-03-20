@@ -41,9 +41,6 @@ window.translationChunks.en = {
   background_topic: "Background",
   background_pricing: "0 TWD ⬆️",
   background_desc: "Pricing for backgrounds depends on complexity. Feel free to ask!",
-  image_new_site: "New Site Desc",
-  image_podcast: "Podcast Desc",
-  image_omuartclub: "Omu Art Club Desc",
   illustration_process_topic: "Commission Process:",
   illustration_process_queue_topic: "1️⃣ Join the queue",
   illustration_process_queue_1: "Check out my X (Twitter) to see whether I'm currently taking commission slots, and make sure you've finished reading all the ToS and the process listed below!",
@@ -199,5 +196,8 @@ window.translationChunks.en = {
   popup_pillow_message: "I partnered with Cuddly Octopus to sell SFW & NSFW dakimakura (body pillows). You'll need to contact their support email for the NSFW versions!",
   link_booth: "VRC model",
   link_shop: "Official Shop",
-  link_pillow: "Body Pillow"
+  link_pillow: "Body Pillow",
+  image_physical_small: "S Size",
+  image_physical_medium: "M Size",
+  image_physical_large: "L Size"
 };

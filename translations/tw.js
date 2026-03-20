@@ -41,9 +41,6 @@ window.translationChunks.tw = {
   background_topic: "背景",
   background_pricing: "0 元台幣 ⬆️",
   background_desc: "背景價格依複雜度而定，歡迎詢問！",
-  image_new_site: "新網站說明",
-  image_podcast: "Podcast 說明",
-  image_omuartclub: "Omu Art Club 說明",
   illustration_process_topic: "委託流程：",
   illustration_process_queue_topic: "1️⃣ 加入等待隊伍",
   illustration_process_queue_1: "請先查看我的 X (Twitter) 確認目前是否有開放委託名額，並確認您已閱讀完所有條款和以下的委託流程！",
@@ -199,5 +196,8 @@ window.translationChunks.tw = {
   popup_pillow_message: "我和 Cuddly Octopus 合作販售一般向和色情向等身抱枕。色情版本需要寄信聯絡他們的客服！",
   link_booth: "VRC 模型",
   link_shop: "官方商店",
-  link_pillow: "等身抱枕"
+  link_pillow: "等身抱枕",
+  image_physical_small: "小尺寸",
+  image_physical_medium: "中尺寸",
+  image_physical_large: "大尺寸"
 };

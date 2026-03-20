@@ -41,9 +41,6 @@ window.translationChunks.kr = {
   background_topic: "배경",
   background_pricing: "0 TWD ⬆️",
   background_desc: "배경 가격은 복잡도에 따라 달라집니다. 편하게 문의해 주세요!",
-  image_new_site: "새 사이트 설명",
-  image_podcast: "팟캐스트 설명",
-  image_omuartclub: "Omu Art Club 설명",
   illustration_process_topic: "커미션 진행 과정:",
   illustration_process_queue_topic: "1️⃣ 대기열에 등록",
   illustration_process_queue_1: "먼저 제 X (Twitter)에서 현재 커미션 슬롯을 받고 있는지 확인하시고, 모든 이용 약관과 아래 과정을 꼭 읽어주세요!",
@@ -199,5 +196,8 @@ window.translationChunks.kr = {
   popup_pillow_message: "Cuddly Octopus와 협력하여 SFW/NSFW 다키마쿠라(바디필로우)를 판매합니다. NSFW 버전은 그들의 고객지원 메일로 문의해 주세요!",
   link_booth: "VRC 모델",
   link_shop: "공식 샵",
-  link_pillow: "바디필로우"
+  link_pillow: "바디필로우",
+  image_physical_small: "S 사이즈",
+  image_physical_medium: "M 사이즈",
+  image_physical_large: "L 사이즈"
 };

@@ -41,9 +41,6 @@ window.translationChunks.jp = {
   background_topic: "背景",
   background_pricing: "0 TWD ⬆️",
   background_desc: "背景の料金は複雑さによって異なります。お気軽にお問い合わせください！",
-  image_new_site: "新サイトの紹介",
-  image_podcast: "ポッドキャストの紹介",
-  image_omuartclub: "Omu Art Club の紹介",
   illustration_process_topic: "コミッションの流れ：",
   illustration_process_queue_topic: "1️⃣ 順番待ちリストに登録",
   illustration_process_queue_1: "まず私の X（Twitter）でコミッション枠を現在受け付けているか確認し、すべての利用規約と以下の流れをお読みください！",
@@ -199,5 +196,8 @@ window.translationChunks.jp = {
   popup_pillow_message: "Cuddly Octopus と提携してSFW/NSFWの抱き枕を販売しています。NSFW版はサポートへメールでお問い合わせください！",
   link_booth: "VRC モデル",
   link_shop: "公式ショップ",
-  link_pillow: "抱き枕"
+  link_pillow: "抱き枕",
+  image_physical_small: "Sサイズ",
+  image_physical_medium: "Mサイズ",
+  image_physical_large: "Lサイズ"
 };

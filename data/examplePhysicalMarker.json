@@ -1,22 +1,69 @@
 {
   "images": [
     {
-      "src": "/images/announcement/new-site.jpg",
-      "alt": "New Site",
-      "link": "https://omurice-kun.com",
-      "desc_translation_key": "image_new_site"
+      "src": "/images/commission/marker/coco-momiji.jpg",
+      "alt": "Coco Momiji",
+      "desc_translation_key": "image_physical_large"
     },
     {
-      "src": "/images/announcement/podcast.jpg",
-      "alt": "Podcast",
-      "link": "https://www.youtube.com/@omu_kun/podcasts",
-      "desc_translation_key": "image_podcast"
+      "src": "/images/commission/marker/giuven.jpg",
+      "alt": "Giuven",
+      "desc_translation_key": "image_physical_large"
     },
     {
-      "src": "/images/announcement/omuartclub.jpg",
-      "alt": "OmuArtClub",
-      "link": "https://youtube.com/playlist?list=PL72gxi8zz2fnYvzxegfZV4FM4QdUqZaCd",
-      "desc_translation_key": "image_omuartclub"
+      "src": "/images/commission/marker/hikari.jpg",
+      "alt": "Hikari",
+      "desc_translation_key": "image_physical_large"
+    },
+    {
+      "src": "/images/commission/marker/kitty.jpg",
+      "alt": "Kitty",
+      "desc_translation_key": "image_physical_large"
+    },
+    {
+      "src": "/images/commission/marker/puppy.jpg",
+      "alt": "Puppy",
+      "desc_translation_key": "image_physical_large"
+    },
+    {
+      "src": "/images/commission/marker/momiji.jpg",
+      "alt": "Momiji",
+      "desc_translation_key": "image_physical_large"
+    },
+    {
+      "src": "/images/commission/marker/pudding.jpg",
+      "alt": "Pudding",
+      "desc_translation_key": "image_physical_medium"
+    },
+    {
+      "src": "/images/commission/marker/levent.jpg",
+      "alt": "Levent",
+      "desc_translation_key": "image_physical_medium"
+    },
+    {
+      "src": "/images/commission/marker/aku.jpg",
+      "alt": "Aku",
+      "desc_translation_key": "image_physical_medium"
+    },
+    {
+      "src": "/images/commission/marker/sakyu.jpg",
+      "alt": "Sakyu",
+      "desc_translation_key": "image_physical_small"
+    },
+    {
+      "src": "/images/commission/marker/size-small.jpg",
+      "alt": "Size Small",
+      "desc_translation_key": "image_physical_small"
+    },
+    {
+      "src": "/images/commission/marker/size-medium.jpg",
+      "alt": "Size Medium",
+      "desc_translation_key": "image_physical_medium"
+    },
+    {
+      "src": "/images/commission/marker/size-large.jpg",
+      "alt": "Size Large",
+      "desc_translation_key": "image_physical_large"
     }
   ]
 }

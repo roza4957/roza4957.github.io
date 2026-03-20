@@ -1,22 +1,14 @@
 {
   "images": [
     {
-      "src": "/images/announcement/new-site.jpg",
-      "alt": "New Site",
-      "link": "https://omurice-kun.com",
-      "desc_translation_key": "image_new_site"
+      "src": "/images/commission/gouache/mao.jpg",
+      "alt": "Mao",
+      "desc_translation_key": "image_physical_large"
     },
     {
-      "src": "/images/announcement/podcast.jpg",
-      "alt": "Podcast",
-      "link": "https://www.youtube.com/@omu_kun/podcasts",
-      "desc_translation_key": "image_podcast"
-    },
-    {
-      "src": "/images/announcement/omuartclub.jpg",
-      "alt": "OmuArtClub",
-      "link": "https://youtube.com/playlist?list=PL72gxi8zz2fnYvzxegfZV4FM4QdUqZaCd",
-      "desc_translation_key": "image_omuartclub"
+      "src": "/images/commission/gouache/aku.jpg",
+      "alt": "Aku",
+      "desc_translation_key": "image_physical_small"
     }
   ]
 }
