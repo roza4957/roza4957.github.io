@@ -1,22 +1,48 @@
 {
   "images": [
     {
-      "src": "/images/announcement/new-site.jpg",
-      "alt": "New Site",
-      "link": "https://omurice-kun.com",
-      "desc_translation_key": "image_new_site"
+      "src": "/images/commission/character-design/yaichiramos.jpg",
+      "alt": "Yaichi Ramos"
     },
     {
-      "src": "/images/announcement/podcast.jpg",
-      "alt": "Podcast",
-      "link": "https://www.youtube.com/@omu_kun/podcasts",
-      "desc_translation_key": "image_podcast"
+      "src": "/images/commission/character-design/hoya.jpg",
+      "alt": "Hoya"
     },
     {
-      "src": "/images/announcement/omuartclub.jpg",
-      "alt": "OmuArtClub",
-      "link": "https://youtube.com/playlist?list=PL72gxi8zz2fnYvzxegfZV4FM4QdUqZaCd",
-      "desc_translation_key": "image_omuartclub"
+      "src": "/images/commission/character-design/hunter.jpg",
+      "alt": "Hunter"
+    },
+    {
+      "src": "/images/commission/character-design/tilly.jpg",
+      "alt": "Tilly"
+    },
+    {
+      "src": "/images/commission/character-design/ashxboi.jpg",
+      "alt": "ashxboi"
+    },
+    {
+      "src": "/images/commission/character-design/arcade.jpg",
+      "alt": "Arcade"
+    },
+    {
+      "src": "/images/commission/character-design/shirybun-1.jpg",
+      "alt": "Shirybun 1"
+    },
+    {
+      "src": "/images/commission/character-design/shirybun-2.jpg",
+      "alt": "Shirybun 2"
+    },
+    {
+      "src": "/images/commission/character-design/anon.jpg",
+      "alt": "Anon"
+    },
+    {
+      "src": "/images/commission/character-design/cherry-snep.jpg",
+      "alt": "Cherry-Snep"
+    },
+    {
+      "src": "/images/commission/character-design/jump-hank.jpg",
+      "alt": "Jump Hank"
     }
   ]
 }
