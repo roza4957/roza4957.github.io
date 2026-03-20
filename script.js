@@ -342,13 +342,17 @@ function initLoopGallery(gallery) {
 
 document.querySelectorAll(".loop-gallery, .loop-gallery-showcase").forEach(initLoopGallery);
 
-// Back to Top
-const backToTopButton = document.querySelector(".back-to-top-button");
-if (backToTopButton) {
-  backToTopButton.addEventListener("click", () => {
+// Back to Top (works in both the main page and inside the lightbox)
+document.addEventListener("click", e => {
+  const btn = e.target.closest(".back-to-top-button");
+  if (!btn) return;
+  const slot = btn.closest(".lightbox-content-slot");
+  if (slot) {
+    slot.scrollTo({ top: 0, behavior: "smooth" });
+  } else {
     window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-}
+  }
+});
 
 // Smooth open/close animations for details (CSS-driven via grid-template-rows)
 function initAnimatedDetails(root) {
@@ -449,6 +453,7 @@ function openCommissionLightbox(contentHtml) {
   }
 
   lightboxOverlay.showModal();
+  lightboxContentSlot.scrollTop = 0;
   setBodyScrollLocked(true);
 }
 
