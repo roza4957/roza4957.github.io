@@ -438,6 +438,10 @@ function openCommissionLightbox(contentHtml) {
   const nextContentHtml = contentHtml || "";
   if (nextContentHtml !== lastLightboxContentHtml) {
     lightboxContentSlot.innerHTML = nextContentHtml;
+    lightboxContentSlot.querySelectorAll("img[data-src]").forEach(img => {
+      img.src = img.dataset.src;
+      img.removeAttribute("data-src");
+    });
     buildLightboxAnchorNav();
     lightboxContentSlot.querySelectorAll(".loop-gallery").forEach(initLoopGallery);
     initAnimatedDetails(lightboxContentSlot);

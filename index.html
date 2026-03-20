@@ -142,7 +142,7 @@
       <h1 data-i18n="topic_about_me"></h1>
     </div>
     <div class="card profile">
-      <img src="/images/profile.png" alt="Profile picture">
+      <img src="/images/about-me/profile.jpg" alt="Profile picture">
       <div>
         <h1>Omurice炸黑輪🍢</h1>
         <p data-i18n="tag_line"></p>
@@ -156,7 +156,7 @@
     <div class="card">
       <div class="commission-grid">
         <div class="commission-item">
-          <img src="/images/wip.png" alt="Commission rules">
+          <img src="/images/commission/rules.png" alt="Commission rules">
           <span class="commission-label" data-i18n="commission_label_rules"></span>
           <div class="lightbox-content">
             <h1 data-i18n="commission_label_rules"></h1>
@@ -173,16 +173,16 @@
           </div>
         </div>
         <div class="commission-item">
-          <img src="/images/wip.png" alt="Commission progress">
+          <img src="/images/commission/progress.png" alt="Commission progress">
           <span class="commission-label" data-i18n="commission_label_progress"></span>
           <a href="https://trello.com/b/9w4xWkN4" title="Commission Progress"></a>
         </div>
         <div class="commission-item">
-          <img src="/images/wip.png" alt="Digital commission">
+          <img src="/images/commission/digital.png" alt="Digital commission">
           <span class="commission-label" data-i18n="commission_label_digital"></span>
           <div class="lightbox-content">
             <h1 data-i18n="digital_illustration" id="digital_illustration"></h1>
-            <img src="/images/commission/digital/illustration-header.jpg">
+            <img data-src="/images/commission/digital/illustration-header.jpg">
             <div class="description-gallery">
               <div class="loop-gallery" data-source="/data/exampleDigitalIllustration.json">
                 <button type="button" class="loop-arrow loop-arrow-left">&#10094;</button>
@@ -282,7 +282,7 @@
             </div>
             <hr>
             <h1 data-i18n="digital_character_design" id="digital_character_design"></h1>
-            <img src="/images/commission/digital/character-design-header.jpg">
+            <img data-src="/images/commission/digital/character-design-header.jpg">
             <div class="description-gallery">
               <div class="loop-gallery" data-source="/data/exampleDigitalCharacterDesign.json">
                 <button type="button" class="loop-arrow loop-arrow-left">&#10094;</button>
@@ -331,10 +331,10 @@
                 </div></div>
               </details>
             </div>
-            <img src="/images/commission/digital/character-design-process.webp">
+            <img data-src="/images/commission/digital/character-design-process.webp">
             <hr>
             <h1 data-i18n="digital_live2d" id="digital_live2d"></h1>
-            <img src="/images/commission/digital/live2d-header.jpg">
+            <img data-src="/images/commission/digital/live2d-header.jpg">
             <div class="description-gallery">
               <div class="loop-gallery" data-source="/data/exampleLive2d.json">
                 <button type="button" class="loop-arrow loop-arrow-left">&#10094;</button>
@@ -385,6 +385,7 @@
             </div>
             <hr>
             <h1 data-i18n="digital_sketch" id="digital_sketch"></h1>
+            <img data-src="/images/commission/digital/sketch-header.jpg">
             <div class="description-gallery">
               <div class="loop-gallery" data-source="/data/exampleSketch.json">
                 <button type="button" class="loop-arrow loop-arrow-left">&#10094;</button>
@@ -406,11 +407,178 @@
           </div>
         </div>
         <div class="commission-item">
-          <img src="/images/wip.png" alt="Physical commission">
+          <img src="/images/commission/physical.png" alt="Physical commission">
           <span class="commission-label" data-i18n="commission_label_physical"></span>
           <div class="lightbox-content">
-            <h2 data-i18n="commission_label_physical"></h2>
-            <p data-i18n="commission_wip"></p>
+            <h1 data-i18n="physical_marker" id="physical_marker"></h1>
+            <img data-src="/images/commission/physical/marker-header.jpg">
+            <div class="description-gallery">
+              <div class="loop-gallery" data-source="/data/examplePhysicalMarker.json">
+                <button type="button" class="loop-arrow loop-arrow-left">&#10094;</button>
+                  <img class="loop-image is-active" alt="loop image 1">
+                  <img class="loop-image" alt="loop image 2">
+                <button type="button" class="loop-arrow loop-arrow-right">&#10095;</button>
+              </div>
+              <div class="description-group">
+                <div class="price-item">
+                  <div class="price-item-header">
+                    <h3 data-i18n="marker_small_topic"></h3>
+                    <span class="price-tag" data-i18n="marker_small_pricing"></span>
+                  </div>
+                  <p class="price-desc" data-i18n="marker_small_desc"></p>
+                </div>
+                <div class="price-item">
+                  <div class="price-item-header">
+                    <h3 data-i18n="marker_medium_topic"></h3>
+                    <span class="price-tag" data-i18n="marker_medium_pricing"></span>
+                  </div>
+                  <p class="price-desc" data-i18n="marker_medium_desc"></p>
+                </div>
+                <div class="price-item">
+                  <div class="price-item-header">
+                    <h3 data-i18n="marker_large_topic"></h3>
+                    <span class="price-tag" data-i18n="marker_large_pricing"></span>
+                  </div>
+                  <p class="price-desc" data-i18n="marker_large_desc"></p>
+                </div>
+              </div>
+            </div>
+            <h2 data-i18n="marker_notice_topic" class="accordion-heading"></h2>
+            <div class="accordion-group">
+              <details class="animated accordion-item">
+                <summary data-i18n="marker_notice_tools_topic"></summary>
+                <div class="details-content"><div class="details-inner">
+                  <p data-i18n="marker_notice_tools_1"></p>
+                  <p data-i18n="marker_notice_tools_2"></p>
+                </div></div>
+              </details>
+            </div>
+            <hr>
+            <h1 data-i18n="physical_gouache" id="physical_gouache"></h1>
+            <img data-src="/images/commission/physical/gouache-header.jpg">
+            <div class="description-gallery">
+              <div class="loop-gallery" data-source="/data/examplePhysicalGouache.json">
+                <button type="button" class="loop-arrow loop-arrow-left">&#10094;</button>
+                  <img class="loop-image is-active" alt="loop image 1">
+                  <img class="loop-image" alt="loop image 2">
+                <button type="button" class="loop-arrow loop-arrow-right">&#10095;</button>
+              </div>
+              <div class="description-group">
+                <div class="price-item">
+                  <div class="price-item-header">
+                    <h3 data-i18n="gouache_small_topic"></h3>
+                    <span class="price-tag" data-i18n="gouache_small_pricing"></span>
+                  </div>
+                  <p class="price-desc" data-i18n="gouache_small_desc"></p>
+                </div>
+                <div class="price-item">
+                  <div class="price-item-header">
+                    <h3 data-i18n="gouache_medium_topic"></h3>
+                    <span class="price-tag" data-i18n="gouache_medium_pricing"></span>
+                  </div>
+                  <p class="price-desc" data-i18n="gouache_medium_desc"></p>
+                </div>
+                <div class="price-item">
+                  <div class="price-item-header">
+                    <h3 data-i18n="gouache_large_topic"></h3>
+                    <span class="price-tag" data-i18n="gouache_large_pricing"></span>
+                  </div>
+                  <p class="price-desc" data-i18n="gouache_large_desc"></p>
+                </div>
+                <div class="price-item">
+                  <div class="price-item-header">
+                    <h3 data-i18n="gouache_custom_topic"></h3>
+                    <span class="price-tag" data-i18n="gouache_custom_pricing"></span>
+                  </div>
+                  <p class="price-desc" data-i18n="gouache_custom_desc"></p>
+                </div>
+              </div>
+            </div>
+            <h2 data-i18n="gouache_notice_topic" class="accordion-heading"></h2>
+            <div class="accordion-group">
+              <details class="animated accordion-item">
+                <summary data-i18n="gouache_notice_tools_topic"></summary>
+                <div class="details-content"><div class="details-inner">
+                  <p data-i18n="gouache_notice_tools_1"></p>
+                  <p data-i18n="gouache_notice_tools_2"></p>
+                </div></div>
+              </details>
+            </div>
+            <hr>
+            <h1 data-i18n="physical_process" id="physical_process"></h1>
+            <div class="accordion-group">
+              <details class="animated accordion-item">
+                <summary data-i18n="physical_process_queue_topic"></summary>
+                <div class="details-content"><div class="details-inner">
+                  <p data-i18n="physical_process_queue_1"></p>
+                  <p data-i18n="physical_process_queue_2"></p>
+                  <p data-i18n="physical_process_queue_3"></p>
+                  <p data-i18n="physical_process_queue_4"></p>
+                </div></div>
+              </details>
+              <details class="animated accordion-item">
+                <summary data-i18n="physical_process_wait_topic"></summary>
+                <div class="details-content"><div class="details-inner">
+                  <p data-i18n="physical_process_wait_1"></p>
+                  <p data-i18n="physical_process_wait_2"></p>
+                </div></div>
+              </details>
+              <details class="animated accordion-item">
+                <summary data-i18n="physical_process_discussion_topic"></summary>
+                <div class="details-content"><div class="details-inner">
+                  <p data-i18n="physical_process_discussion_1"></p>
+                  <p data-i18n="physical_process_discussion_2"></p>
+                  <p data-i18n="physical_process_discussion_3"></p>
+                  <p data-i18n="physical_process_discussion_4"></p>
+                </div></div>
+              </details>
+              <details class="animated accordion-item">
+                <summary data-i18n="physical_process_payment_topic"></summary>
+                <div class="details-content"><div class="details-inner">
+                  <p data-i18n="physical_process_payment_1"></p>
+                  <p data-i18n="physical_process_payment_2"></p>
+                  <p data-i18n="physical_process_payment_3"></p>
+                  <p data-i18n="physical_process_payment_4"></p>
+                  <p data-i18n="physical_process_payment_5"></p>
+                </div></div>
+              </details>
+              <details class="animated accordion-item">
+                <summary data-i18n="physical_process_drawing_topic"></summary>
+                <div class="details-content"><div class="details-inner">
+                  <p data-i18n="physical_process_drawing_1"></p>
+                  <p data-i18n="physical_process_drawing_2"></p>
+                </div></div>
+              </details>
+              <details class="animated accordion-item">
+                <summary data-i18n="physical_process_deliver_topic"></summary>
+                <div class="details-content"><div class="details-inner">
+                  <p data-i18n="physical_process_deliver_1"></p>
+                  <p data-i18n="physical_process_deliver_2"></p>
+                </div></div>
+              </details>
+            </div>
+            <hr>
+            <h1 data-i18n="physical_notice" id="physical_notice"></h1>
+            <div class="accordion-group">
+              <details class="animated accordion-item">
+                <summary data-i18n="physical_notice_no_sketch_topic"></summary>
+                <div class="details-content"><div class="details-inner">
+                  <p data-i18n="physical_notice_no_sketch_1"></p>
+                </div></div>
+              </details>
+              <details class="animated accordion-item">
+                <summary data-i18n="physical_notice_pay_in_advance_topic"></summary>
+                <div class="details-content"><div class="details-inner">
+                  <p data-i18n="physical_notice_pay_in_advance_1"></p>
+                </div></div>
+              </details>
+              <details class="animated accordion-item">
+                <summary data-i18n="physical_notice_carrier_topic"></summary>
+                <div class="details-content"><div class="details-inner">
+                  <p data-i18n="physical_notice_carrier_1"></p>
+                </div></div>
+              </details>
+            </div>
           </div>
         </div>
       </div>
