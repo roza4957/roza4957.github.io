@@ -199,5 +199,10 @@ window.translationChunks.tw = {
   link_pillow: "等身抱枕",
   image_physical_small: "小尺寸",
   image_physical_medium: "中尺寸",
-  image_physical_large: "大尺寸"
+  image_physical_large: "大尺寸",
+  image_live2d_cocobun: "Cocobun ⬇️🔗",
+  image_live2d_slivers: "Silvers ⬇️🔗",
+  image_live2d_momiji: "熊野紅葉 ⬇️🔗",
+  image_live2d_monkeykii: "猴吱 ⬇️🔗",
+  image_live2d_moyun: "默云 ⬇️🔗"
 };

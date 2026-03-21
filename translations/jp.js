@@ -199,5 +199,10 @@ window.translationChunks.jp = {
   link_pillow: "抱き枕",
   image_physical_small: "Sサイズ",
   image_physical_medium: "Mサイズ",
-  image_physical_large: "Lサイズ"
+  image_physical_large: "Lサイズ",
+  image_live2d_cocobun: "Cocobun ⬇️🔗",
+  image_live2d_slivers: "Silvers ⬇️🔗",
+  image_live2d_momiji: "Kumano Momiji ⬇️🔗",
+  image_live2d_monkeykii: "Monkeykii ⬇️🔗",
+  image_live2d_moyun: "Moyun ⬇️🔗"
 };

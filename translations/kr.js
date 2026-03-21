@@ -199,5 +199,10 @@ window.translationChunks.kr = {
   link_pillow: "바디필로우",
   image_physical_small: "S 사이즈",
   image_physical_medium: "M 사이즈",
-  image_physical_large: "L 사이즈"
+  image_physical_large: "L 사이즈",
+  image_live2d_cocobun: "Cocobun ⬇️🔗",
+  image_live2d_slivers: "Silvers ⬇️🔗",
+  image_live2d_momiji: "Kumano Momiji ⬇️🔗",
+  image_live2d_monkeykii: "Monkeykii ⬇️🔗",
+  image_live2d_moyun: "Moyun ⬇️🔗"
 };

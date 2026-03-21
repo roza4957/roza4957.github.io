@@ -1,22 +1,50 @@
 {
   "images": [
     {
-      "src": "/images/announcement/new-site.jpg",
-      "alt": "New Site",
-      "link": "https://omurice-kun.com",
-      "desc_translation_key": "image_new_site"
+      "src": "/images/commission/live2d/cocobun.jpg",
+      "alt": "Cocobun",
+      "desc_translation_key": "image_live2d_cocobun",
+      "link": "https://cocobun.carrd.co/"
     },
     {
-      "src": "/images/announcement/podcast.jpg",
-      "alt": "Podcast",
-      "link": "https://www.youtube.com/@omu_kun/podcasts",
-      "desc_translation_key": "image_podcast"
+      "src": "/images/commission/live2d/silvers.jpg",
+      "alt": "Slivers",
+      "desc_translation_key": "image_live2d_slivers",
+      "link": "https://portaly.cc/slsmusic"
     },
     {
-      "src": "/images/announcement/omuartclub.jpg",
-      "alt": "OmuArtClub",
-      "link": "https://youtube.com/playlist?list=PL72gxi8zz2fnYvzxegfZV4FM4QdUqZaCd",
-      "desc_translation_key": "image_omuartclub"
+      "src": "/images/commission/live2d/momiji.jpg",
+      "alt": "Kumano Momiji",
+      "desc_translation_key": "image_live2d_momiji",
+      "link": "https://lit.link/en/Kumanomomiji"
+    },
+    {
+      "src": "/images/commission/live2d/monkeykii.jpg",
+      "alt": "Monkeykii",
+      "desc_translation_key": "image_live2d_monkeykii",
+      "link": "https://www.twitch.tv/monkeykii"
+    },
+    {
+      "src": "/images/commission/live2d/moyun.jpg",
+      "alt": "Moyun",
+      "desc_translation_key": "image_live2d_moyun",
+      "link": "https://lit.link/Mokukumo"
+    },
+    {
+      "src": "/images/commission/live2d/hohovrc.jpg",
+      "alt": "HohoVrc"
+    },
+    {
+      "src": "/images/commission/live2d/little.jpg",
+      "alt": "Little"
+    },
+    {
+      "src": "/images/commission/live2d/ryutai.jpg",
+      "alt": "Ryutai"
+    },
+    {
+      "src": "/images/commission/live2d/sekaihiyo.jpg",
+      "alt": "sekaihiyo"
     }
   ]
 }

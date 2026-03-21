@@ -199,5 +199,10 @@ window.translationChunks.en = {
   link_pillow: "Body Pillow",
   image_physical_small: "S Size",
   image_physical_medium: "M Size",
-  image_physical_large: "L Size"
+  image_physical_large: "L Size",
+  image_live2d_cocobun: "Cocobun",
+  image_live2d_slivers: "Silvers",
+  image_live2d_momiji: "Kumano Momiji",
+  image_live2d_monkeykii: "Monkeykii",
+  image_live2d_moyun: "Moyun"
 };
