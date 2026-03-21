@@ -1,22 +1,109 @@
 {
   "images": [
     {
-      "src": "/images/announcement/new-site.jpg",
-      "alt": "New Site",
-      "link": "https://omurice-kun.com",
-      "desc_translation_key": "image_new_site"
+      "src": "/images/commission/illustration/waysinhxh.jpg",
+      "alt": "waysinhxh",
+      "desc_translation_key": "image_illustration_full_body"
     },
     {
-      "src": "/images/announcement/podcast.jpg",
-      "alt": "Podcast",
-      "link": "https://www.youtube.com/@omu_kun/podcasts",
-      "desc_translation_key": "image_podcast"
+      "src": "/images/commission/illustration/YaichiRamos.jpg",
+      "alt": "YaichiRamos",
+      "desc_translation_key": "image_illustration_half_body"
     },
     {
-      "src": "/images/announcement/omuartclub.jpg",
-      "alt": "OmuArtClub",
-      "link": "https://youtube.com/playlist?list=PL72gxi8zz2fnYvzxegfZV4FM4QdUqZaCd",
-      "desc_translation_key": "image_omuartclub"
+      "src": "/images/commission/illustration/giuven-skate.jpg",
+      "alt": "giuven-skate",
+      "desc_translation_key": "image_illustration_full_body"
+    },
+    {
+      "src": "/images/commission/illustration/mnights.jpg",
+      "alt": "mnights",
+      "desc_translation_key": "image_illustration_half_body"
+    },
+    {
+      "src": "/images/commission/illustration/flores53641523.jpg",
+      "alt": "flores53641523",
+      "desc_translation_key": "image_illustration_full_body"
+    },
+    {
+      "src": "/images/commission/illustration/giuven-hotel.jpg",
+      "alt": "giuven-hotel",
+      "desc_translation_key": "image_illustration_full_body"
+    },
+    {
+      "src": "/images/commission/illustration/mrping.jpg",
+      "alt": "mrping",
+      "desc_translation_key": "image_illustration_half_body"
+    },
+    {
+      "src": "/images/commission/illustration/giuven-jipai.jpg",
+      "alt": "giuven-jipai",
+      "desc_translation_key": "image_illustration_half_body"
+    },
+    {
+      "src": "/images/commission/illustration/hazelnute.jpg",
+      "alt": "hazelnute",
+      "desc_translation_key": "image_illustration_full_body"
+    },
+    {
+      "src": "/images/commission/illustration/IchiroOkawa.jpg",
+      "alt": "IchiroOkawa",
+      "desc_translation_key": "image_illustration_profile"
+    },
+    {
+      "src": "/images/commission/illustration/IlyaYenotka.jpg",
+      "alt": "IlyaYenotka",
+      "desc_translation_key": "image_illustration_half_body"
+    },
+    {
+      "src": "/images/commission/illustration/Komi_tsu07.jpg",
+      "alt": "Komi_tsu07",
+      "desc_translation_key": "image_illustration_half_body"
+    },
+    {
+      "src": "/images/commission/illustration/lucky.jpg",
+      "alt": "lucky",
+      "desc_translation_key": "image_illustration_profile"
+    },
+    {
+      "src": "/images/commission/illustration/momiji.jpg",
+      "alt": "momiji",
+      "desc_translation_key": "image_illustration_half_body"
+    },
+    {
+      "src": "/images/commission/illustration/razorfur.jpg",
+      "alt": "razorfur",
+      "desc_translation_key": "image_illustration_full_body"
+    },
+    {
+      "src": "/images/commission/illustration/rielnallan.jpg",
+      "alt": "rielnallan",
+      "desc_translation_key": "image_illustration_full_body"
+    },
+    {
+      "src": "/images/commission/illustration/smileetiger.jpg",
+      "alt": "smileetiger",
+      "desc_translation_key": "image_illustration_full_body"
+    },
+    {
+      "src": "/images/commission/illustration/taiga.jpg",
+      "alt": "taiga",
+      "desc_translation_key": "image_illustration_full_body"
+    },
+    {
+      "src": "/images/commission/illustration/tweektweak369.jpg",
+      "alt": "tweektweak369",
+      "desc_translation_key": "image_illustration_full_body"
+    },
+    {
+      "src": "/images/commission/illustration/zha-ying59292.jpg",
+      "alt": "zha-ying59292",
+      "desc_translation_key": "image_illustration_half_body"
+    },
+    {
+      "src": "/images/commission/illustration/EyesOfAether.jpg",
+      "alt": "EyesOfAether",
+      "desc_translation_key": "image_illustration_full_body"
     }
   ]
 }
