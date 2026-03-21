@@ -203,9 +203,9 @@ window.translationChunks.en = {
   image_illustration_profile: "Profile Pic",
   image_illustration_half_body: "Half Body",
   image_illustration_full_body: "Full Body",
-  image_live2d_cocobun: "Cocobun",
-  image_live2d_slivers: "Silvers",
-  image_live2d_momiji: "Kumano Momiji",
-  image_live2d_monkeykii: "Monkeykii",
-  image_live2d_moyun: "Moyun"
+  image_live2d_cocobun: "Cocobun ⬇️🔗",
+  image_live2d_slivers: "Silvers ⬇️🔗",
+  image_live2d_momiji: "Kumano Momiji ⬇️🔗",
+  image_live2d_monkeykii: "Monkeykii ⬇️🔗",
+  image_live2d_moyun: "Moyun ⬇️🔗"
 };
