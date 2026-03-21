@@ -296,6 +296,8 @@ function initLoopGallery(gallery) {
     const current = loopImages[loopIndex];
     if (current?.link) {
       window.open(current.link, "_blank", "noopener");
+    } else {
+      flashOverlays();
     }
   });
 
