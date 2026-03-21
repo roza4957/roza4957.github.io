@@ -124,7 +124,7 @@ function initLoopGallery(gallery) {
     dotsTimer = setTimeout(() => {
       if (dotsContainer) dotsContainer.classList.remove("is-visible");
       if (descOverlay) descOverlay.classList.remove("is-visible");
-    }, 3000);
+    }, 2000);
   }
 
   function getDescText(imageData) {
