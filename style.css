@@ -929,14 +929,16 @@ footer {
 }
 
 .profile a,
-footer a {
+footer a,
+.accordion-item .details-inner a {
   color: var(--accent);
   text-decoration: none;
   font-weight: 700;
 }
 
 .profile a:hover,
-footer a:hover {
+footer a:hover,
+.accordion-item .details-inner a:hover {
   color: var(--text);
   text-decoration: underline;
 }
