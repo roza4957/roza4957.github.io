@@ -114,6 +114,18 @@ function initLoopGallery(gallery) {
   let isTransitioning = false;
   let dots = [];
   let descOverlay = null;
+  let dotsContainer = null;
+  let dotsTimer = null;
+
+  function flashOverlays() {
+    if (dotsContainer) dotsContainer.classList.add("is-visible");
+    if (descOverlay && !descOverlay.hidden) descOverlay.classList.add("is-visible");
+    if (dotsTimer) clearTimeout(dotsTimer);
+    dotsTimer = setTimeout(() => {
+      if (dotsContainer) dotsContainer.classList.remove("is-visible");
+      if (descOverlay) descOverlay.classList.remove("is-visible");
+    }, 3000);
+  }
 
   function getDescText(imageData) {
     if (imageData?.desc_translation_key) {
@@ -146,6 +158,7 @@ function initLoopGallery(gallery) {
     const direction = index > loopIndex ? "next" : "prev";
     stopLoop();
     showLoopImage(index, direction);
+    flashOverlays();
     startLoop();
   }
 
@@ -255,7 +268,7 @@ function initLoopGallery(gallery) {
           }
 
           if (loopImages.length > 1) {
-            const dotsContainer = document.createElement("div");
+            dotsContainer = document.createElement("div");
             dotsContainer.className = "loop-dots";
             loopImages.forEach((_, i) => {
               const dot = document.createElement("button");
@@ -322,6 +335,7 @@ function initLoopGallery(gallery) {
       } else {
         showNextImage();
       }
+      flashOverlays();
     }
 
     isSwiping = false;
@@ -332,10 +346,12 @@ function initLoopGallery(gallery) {
     loopPrev.addEventListener("click", () => {
       stopLoop();
       showPrevImage();
+      flashOverlays();
     });
     loopNext.addEventListener("click", () => {
       stopLoop();
       showNextImage();
+      flashOverlays();
     });
   }
 }

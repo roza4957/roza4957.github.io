@@ -657,14 +657,31 @@ body {
 .loop-dots {
   position: absolute;
   bottom: 0.5rem;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+  right: 0;
+  width: fit-content;
+  max-width: calc(100% - 1rem);
+  margin: 0 auto;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 0.5rem;
   z-index: 2;
   border-radius: 1rem;
   padding: 0.5rem;
   background: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.loop-dots.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox-content-slot .loop-dots {
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .loop-dot {
@@ -704,6 +721,12 @@ body {
   max-width: calc(100% - 1rem);
   z-index: 3;
   pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.loop-desc.is-visible {
+  opacity: 1;
 }
 
 /* accordion */
