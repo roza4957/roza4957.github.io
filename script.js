@@ -254,6 +254,13 @@ function initLoopGallery(gallery) {
           loopImageSlots[activeSlotIndex].alt = first.alt || "loop image";
           loopImageSlots[activeSlotIndex].classList.add("is-active");
 
+          // Preload all remaining images so transitions are instant
+          loopImages.forEach((img, i) => {
+            if (i === 0) return;
+            const preload = new Image();
+            preload.src = img.src;
+          });
+
           // Create desc overlay if any image has a desc
           if (loopImages.some(img => img.desc || img.desc_translation_key)) {
             // Remove any existing desc overlays first
@@ -358,7 +365,9 @@ function initLoopGallery(gallery) {
   }
 }
 
-document.querySelectorAll(".loop-gallery, .loop-gallery-showcase").forEach(initLoopGallery);
+document.querySelectorAll(".loop-gallery, .loop-gallery-showcase").forEach(gallery => {
+  if (!gallery.closest(".lightbox-content")) initLoopGallery(gallery);
+});
 
 // Back to Top (works in both the main page and inside the lightbox)
 document.addEventListener("click", e => {
