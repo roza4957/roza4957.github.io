@@ -711,7 +711,7 @@ body {
   transform: translateX(-50%);
   padding: 0.5rem 0.75rem;
   border-radius: 999px;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.6);
   font-size: 0.85rem;
   line-height: 1.2;
   text-align: center;
