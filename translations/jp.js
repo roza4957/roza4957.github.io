@@ -108,7 +108,7 @@ window.translationChunks.jp = {
   live2d_notice_process_1: "Live2D モデルイラストの制作の流れは、通常のイラストコミッションと同じです。詳しくはそちらの流れをご確認ください！",
   sketch_topic: "落書きコミッション",
   sketch_pricing: "¥10000 JPY",
-  sketch_desc: "Pixiv リクエストで、シンプルな白黒の落書きコミッションを受け付けています！下のリンクから詳細をご確認ください！",
+  sketch_desc: "Pixivリクエストで、シンプルなモノクロ落書きコミッションを受け付けています！<br>Pixivリクエストには独自のルール、締切、進行フローがあります。<br>詳しくは下のリンクをご確認ください！",
   pixiv_request: "Pixiv リクエスト",
   physical_marker: "マーカーペン",
   physical_gouache: "ガッシュ",

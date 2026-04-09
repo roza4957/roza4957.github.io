@@ -108,7 +108,7 @@ window.translationChunks.en = {
   live2d_notice_process_1: "The process of my Live2D model illustration is the same as my regular illustration commissions. Check out the process listed there for more info!",
   sketch_topic: "Doodle Commission",
   sketch_pricing: "¥10000 JPY",
-  sketch_desc: "I take simple, black and white doodle commission on Pixiv Request! Check out more through the link below!",
+  sketch_desc: "I take simple, black and white doodle commission on Pixiv Request!<br>Pixiv Requests come with it's own rules, deadline, and process.<br>Please refer to the link below for more!",
   pixiv_request: "Pixiv Request",
   physical_marker: "Marker Pen",
   physical_gouache: "Gouache",
