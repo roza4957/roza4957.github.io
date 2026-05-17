@@ -1,6 +1,11 @@
 {
   "images": [
     {
+      "src": "/images/commission/gouache/giuven.jpg",
+      "alt": "Giuven",
+      "desc_translation_key": "image_physical_medium"
+    },
+    {
       "src": "/images/commission/gouache/mao.jpg",
       "alt": "Mao",
       "desc_translation_key": "image_physical_large"
