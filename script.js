@@ -356,11 +356,13 @@ function initLoopGallery(gallery) {
       stopLoop();
       showPrevImage();
       flashOverlays();
+      startLoop();
     });
     loopNext.addEventListener("click", () => {
       stopLoop();
       showNextImage();
       flashOverlays();
+      startLoop();
     });
   }
 }
