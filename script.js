@@ -42,11 +42,6 @@ function updatePageLanguage() {
       }
     }
   });
-  
-  // Rebuild lightbox anchor nav if lightbox is currently open (labels may have i18n keys)
-  if (typeof lightboxOverlay !== "undefined" && lightboxOverlay?.open) {
-    buildLightboxAnchorNav();
-  }
 }
 
 // Language dropdown setup
@@ -90,6 +85,7 @@ if (languageSelect && languageButton && languageOptions) {
       document.documentElement.lang = currentLanguage;
       updateLanguageDropdown();
       updatePageLanguage();
+      if (lightboxOverlay?.open) buildLightboxAnchorNav();
     }
     languageSelect.classList.remove("is-open");
   });
