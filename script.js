@@ -112,6 +112,7 @@ function initLoopGallery(gallery) {
   let loopTimer = null;
   let activeSlotIndex = 0;
   let isTransitioning = false;
+  let transitionSafetyTimer = null;
   let dots = [];
   let descOverlay = null;
   let dotsContainer = null;
@@ -179,6 +180,10 @@ function initLoopGallery(gallery) {
     const incoming = loopImageSlots[1 - activeSlotIndex];
 
     isTransitioning = Boolean(direction);
+    if (transitionSafetyTimer) {
+      clearTimeout(transitionSafetyTimer);
+      transitionSafetyTimer = null;
+    }
     const preload = new Image();
     preload.onload = () => {
       clearSlideClasses(outgoing);
@@ -189,9 +194,13 @@ function initLoopGallery(gallery) {
       incoming.classList.add("is-active");
       outgoing.classList.remove("is-active");
 
-      if (direction) {
+      const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (direction && !reducedMotion) {
         incoming.classList.add(direction === "prev" ? "slide-in-prev" : "slide-in-next");
         outgoing.classList.add(direction === "prev" ? "slide-out-prev" : "slide-out-next");
+        transitionSafetyTimer = setTimeout(() => { isTransitioning = false; }, 600);
+      } else {
+        isTransitioning = false;
       }
 
       loopIndex = safeIndex;
