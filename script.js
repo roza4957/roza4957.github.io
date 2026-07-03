@@ -375,6 +375,23 @@ function initLoopGallery(gallery) {
       startLoop();
     });
   }
+
+  gallery.setAttribute("tabindex", "0");
+  gallery.addEventListener("keydown", e => {
+    if (e.key === "ArrowLeft") {
+      e.preventDefault();
+      stopLoop();
+      showPrevImage();
+      flashOverlays();
+      startLoop();
+    } else if (e.key === "ArrowRight") {
+      e.preventDefault();
+      stopLoop();
+      showNextImage();
+      flashOverlays();
+      startLoop();
+    }
+  });
 }
 
 document.querySelectorAll(".loop-gallery, .loop-gallery-showcase").forEach(gallery => {
