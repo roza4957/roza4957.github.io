@@ -240,6 +240,11 @@ body {
   color: var(--accent);
 }
 
+.social-icons a:hover .svg-icon,
+.social-icon-group a:hover .svg-icon {
+  filter: brightness(0) saturate(100%) invert(62%) sepia(14%) saturate(560%) hue-rotate(188deg);
+}
+
 /* Card sections */
 .card-title {
   background: var(--accent);
