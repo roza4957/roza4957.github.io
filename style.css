@@ -947,3 +947,50 @@ footer a:hover,
   color: var(--text);
   text-decoration: underline;
 }
+
+@media (prefers-reduced-motion: reduce) {
+  /* Disable slide animations — JS already skips adding the classes,
+     but this ensures no animation plays if the classes are present for any reason */
+  .loop-image.slide-in-next,
+  .loop-image.slide-in-prev,
+  .loop-image.slide-out-next,
+  .loop-image.slide-out-prev {
+    animation: none;
+  }
+
+  /* Disable accordion expand/collapse transition */
+  .accordion-item .details-content {
+    transition: none;
+  }
+
+  /* Disable hover lift transforms */
+  .social-icons a:hover,
+  .social-icon-group a:hover {
+    transform: none;
+  }
+
+  .loop-arrow:hover {
+    transform: translateY(-50%);
+  }
+
+  .popup-action:hover,
+  .back-to-top-button:hover {
+    transform: none;
+  }
+
+  /* Disable misc transitions */
+  .language-selected,
+  .language-options li,
+  .accordion-item,
+  .accordion-item summary::after,
+  .accordion-item[open].is-closing > summary::after,
+  .loop-arrow,
+  .loop-dot,
+  .loop-dots,
+  .loop-desc,
+  .description-group .price-item,
+  .lightbox-anchor-btn,
+  .popup-action {
+    transition: none;
+  }
+}
