@@ -392,6 +392,9 @@ function initLoopGallery(gallery) {
       startLoop();
     }
   });
+
+  gallery._galleryStop = stopLoop;
+  gallery._galleryStart = startLoop;
 }
 
 document.querySelectorAll(".loop-gallery, .loop-gallery-showcase").forEach(gallery => {
@@ -417,6 +420,11 @@ function initAnimatedDetails(root) {
     details.classList.add("is-closing");
     const content = details.querySelector(".details-content");
     if (!content) { details.open = false; details.classList.remove("is-closing"); return; }
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      details.open = false;
+      details.classList.remove("is-closing");
+      return;
+    }
     content.addEventListener("transitionend", function handler() {
       content.removeEventListener("transitionend", handler);
       details.open = false;
@@ -497,6 +505,7 @@ function openCommissionLightbox(contentHtml) {
 
   const nextContentHtml = contentHtml || "";
   if (nextContentHtml !== lastLightboxContentHtml) {
+    lightboxContentSlot.querySelectorAll(".loop-gallery").forEach(g => g._galleryStop?.());
     lightboxContentSlot.innerHTML = nextContentHtml;
     lightboxContentSlot.querySelectorAll("img[data-src]").forEach(img => {
       img.src = img.dataset.src;
@@ -506,6 +515,8 @@ function openCommissionLightbox(contentHtml) {
     lightboxContentSlot.querySelectorAll(".loop-gallery").forEach(initLoopGallery);
     initAnimatedDetails(lightboxContentSlot);
     lastLightboxContentHtml = nextContentHtml;
+  } else {
+    lightboxContentSlot.querySelectorAll(".loop-gallery").forEach(g => g._galleryStart?.());
   }
 
   lightboxOverlay.showModal();
@@ -556,6 +567,7 @@ if (commissionGrid && lightboxOverlay) {
   });
 
   lightboxOverlay.addEventListener("close", () => {
+    lightboxContentSlot.querySelectorAll(".loop-gallery").forEach(g => g._galleryStop?.());
     setBodyScrollLocked(false);
   });
 }
