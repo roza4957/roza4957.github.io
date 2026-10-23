@@ -1,14 +1,19 @@
 {
   "images": [
     {
+      "src": "/images/merch/CatDogMemoDoujinshiEN.jpg",
+      "alt": "Cat&Dog Memo Doujinshi English",
+      "link": "https://cxc.today/@omurice/book/63310/reader/406634"
+    },
+    {
+      "src": "/images/merch/CatDogMemoDoujinshiCH.jpg",
+      "alt": "Cat&Dog Memo Doujinshi Chinese",
+      "link": "https://cxc.today/@omurice/book/63229/reader/406095"
+    },
+    {
       "src": "/images/merch/pudding.jpg",
       "alt": "Pudding VRChat 3D Model",
       "link": "https://omurice-kun.booth.pm/items/7323264"
-    },
-    {
-      "src": "/images/merch/2026doujin.jpg",
-      "alt": "New 2026 Doujin",
-      "link": "https://www.pixiv.net/artworks/147120939"
     },
     {
       "src": "/images/merch/pillow.jpg",

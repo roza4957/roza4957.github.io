@@ -1,11 +1,6 @@
 {
   "images": [
     {
-      "src": "/images/announcement/NiCE2.jpg",
-      "alt": "NiCE2.jpg",
-      "link": "https://www.pixiv.net/artworks/147120939"
-    },
-    {
       "src": "/images/announcement/podcast.jpg",
       "alt": "Podcast",
       "link": "https://www.youtube.com/@omu_kun/podcasts"
