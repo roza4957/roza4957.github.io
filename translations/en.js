@@ -197,7 +197,7 @@ window.translationChunks.en = {
   popup_fanbox_message: "FANBOX is my main supporting platform! You can get uncensored versions of my work by joining my supporter channel!",
   popup_fantia_message: "Fantia is an alternative to FANBOX if you have issues paying on the other. You only get censored versions of my newest works, though.",
   popup_booth_message: "BOOTH is where I sell VRChat 3D models I've made!",
-  popup_shop_message: "You can find my official shop (ships internationally) here! The shop isn't always open, so come back later if it's not!",
+  popup_shop_message: "You can find my official shop (ships to Taiwan only) here! The shop isn't always open, so come back later if it's not!",
   popup_pillow_message: "I partnered with Cuddly Octopus to sell SFW & NSFW dakimakura (body pillows). You'll need to contact their support email for the NSFW versions!",
   link_booth: "Booth (Digital)",
   link_cxc: "CxC (Digital)",

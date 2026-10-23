@@ -197,7 +197,7 @@ window.translationChunks.kr = {
   popup_fanbox_message: "FANBOX는 제 메인 후원 플랫폼입니다! 후원하면 무검열 버전을 볼 수 있어요!",
   popup_fantia_message: "Fantia는 FANBOX의 대안 플랫폼입니다. 결제에 문제가 있으면 사용해 보세요. 다만 최신 작품은 검열본만 제공합니다.",
   popup_booth_message: "BOOTH는 제가 만든 VRChat 3D 모델을 판매하는 곳입니다!",
-  popup_shop_message: "공식 온라인 샵(국제 배송 가능)은 여기입니다! 항상 열려 있지는 않으니, 닫혀 있다면 나중에 다시 와 주세요!",
+  popup_shop_message: "여기서 대만에만 배송하는 공식 온라인 샵을 확인할 수 있어요! 샵은 항상 열려 있지 않으니, 닫혀 있다면 나중에 다시 와 주세요!",
   popup_pillow_message: "Cuddly Octopus와 협력하여 SFW/NSFW 다키마쿠라(바디필로우)를 판매합니다. NSFW 버전은 그들의 고객지원 메일로 문의해 주세요!",
   link_booth: "BOOTH (디지털 상품)",
   link_cxc: "CxC (디지털 상품)",

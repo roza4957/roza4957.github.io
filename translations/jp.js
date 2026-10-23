@@ -197,7 +197,7 @@ window.translationChunks.jp = {
   popup_fanbox_message: "FANBOX はメインの支援プラットフォームです！支援者になると無修正版が見られます！",
   popup_fantia_message: "Fantia はFANBOXの代替プラットフォームです。支払いに問題がある場合に利用できますが、最新作はモザイク版のみです。",
   popup_booth_message: "BOOTH は私が作成した VRChat 3D モデルを販売する場所です！",
-  popup_shop_message: "こちらは公式ショップ（国際発送対応）です！常時オープンではないので、開いていない場合はまた後で来てください！",
+  popup_shop_message: "こちらは台湾へのみ発送している公式ショップです！常時オープンではないので、開いていない場合はまた後で来てください！",
   popup_pillow_message: "Cuddly Octopus と提携してSFW/NSFWの抱き枕を販売しています。NSFW版はサポートへメールでお問い合わせください！",
   link_booth: "BOOTH（デジタル商品）",
   link_cxc: "CxC（デジタル商品）",

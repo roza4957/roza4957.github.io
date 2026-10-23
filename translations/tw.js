@@ -197,7 +197,7 @@ window.translationChunks.tw = {
   popup_fanbox_message: "FANBOX 是我主要的贊助平台！加入即可取得無打碼版本作品！",
   popup_fantia_message: "Fantia 是 FANBOX 的替代平台，如果你在付款上有問題可以使用。不過只能看到最新作品的打碼版本。",
   popup_booth_message: "BOOTH 是我販售 VRChat 3D 模型的地方！",
-  popup_shop_message: "這裡是我的官方商店（可國際配送）！商店不定期開放，如果碰壁歡迎過一陣子再來！",
+  popup_shop_message: "這裡是我的官方商店（僅配送到台灣）！商店不定期開放，如果碰壁歡迎過一陣子再來！",
   popup_pillow_message: "我和 Cuddly Octopus 合作販售一般向和色情向等身抱枕。色情版本需要寄信聯絡他們的客服！",
   link_booth: "Booth (數位商品)",
   link_cxc: "CxC（數位商品）",

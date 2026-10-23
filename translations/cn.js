@@ -197,7 +197,7 @@ window.translationChunks.cn = {
   popup_fanbox_message: "FANBOX 是我主要的支持平台！加入即可获得未打码版本作品！",
   popup_fantia_message: "Fantia 是 FANBOX 的替代平台，如果你在付款上有问题可以使用。不过只能看到最新作品的打码版本。",
   popup_booth_message: "BOOTH 是我售卖 VRChat 3D 模型的地方！",
-  popup_shop_message: "这里是我的官方商店（可国际配送）！商店不定期开启，如果没开欢迎过段时间再来！",
+  popup_shop_message: "这里是我的官方商店（仅配送至台湾）！商店不定期开启，如果没开欢迎过段时间再来！",
   popup_pillow_message: "我与 Cuddly Octopus 合作售卖 SFW 与 NSFW 抱枕。NSFW 版本需要联系他们的客服邮箱！",
   link_booth: "Booth（数字商品）",
   link_cxc: "CxC（数字商品）",
