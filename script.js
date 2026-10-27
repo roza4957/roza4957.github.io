@@ -131,7 +131,14 @@ function initLoopGallery(gallery) {
 
   function getDescText(imageData) {
     if (imageData?.desc_translation_key) {
-      return t(imageData.desc_translation_key);
+      const keyList = imageData.desc_translation_key;
+      if (!keyList.includes(",")) return t(keyList);
+      return keyList
+        .split(",")
+        .map(key => key.trim())
+        .filter(Boolean)
+        .map(key => t(key))
+        .join(" ");
     }
     return imageData?.desc || "";
   }
