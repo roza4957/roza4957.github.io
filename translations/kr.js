@@ -116,7 +116,7 @@ window.translationChunks.kr = {
   live2d_notice_process_topic: "⏯️ 진행 과정",
   live2d_notice_process_1: "Live2D 모델 일러스트의 진행 과정은 일반 일러스트 커미션과 동일합니다. 자세한 내용은 해당 과정을 확인해 주세요!",
   sketch_topic: "낙서 커미션",
-  sketch_pricing: "¥10000 JPY",
+  sketch_pricing: "¥15000 JPY",
   sketch_desc_1: "Pixiv Request에서 간단한 흑백 낙서 커미션을 받고 있습니다!",
   sketch_desc_2: "Pixiv Request에는 자체 규칙, 마감 기한, 진행 과정이 있습니다.",
   sketch_desc_3: "자세한 내용은 아래 링크를 확인해 주세요!",

@@ -1,6 +1,11 @@
 {
   "images": [
     {
+      "src": "/images/commission/sketch/kumano-momiji-2.jpg",
+      "alt": "Momiji2",
+      "link": "https://pixiv.net/artworks/151474833"
+    },
+    {
       "src": "/images/commission/sketch/kumano-momiji.jpg",
       "alt": "Momiji",
       "link": "https://pixiv.net/artworks/142805577"

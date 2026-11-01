@@ -116,7 +116,7 @@ window.translationChunks.tw = {
   live2d_notice_process_topic: "⏯️ 流程",
   live2d_notice_process_1: "我的 Live2D 模型繪製流程與一般插畫委託相同。請查看那邊列出的流程以獲取更多資訊！",
   sketch_topic: "塗鴉委託",
-  sketch_pricing: "¥10000 JPY",
+  sketch_pricing: "¥15000 JPY",
   sketch_desc_1: "我在 Pixiv 約稿接受簡單的黑白塗鴉委託！",
   sketch_desc_2: "Pixiv 約稿有自己的一套規則、期限與流程。",
   sketch_desc_3: "更多資訊請參考下方連結！",

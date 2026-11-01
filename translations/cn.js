@@ -116,7 +116,7 @@ window.translationChunks.cn = {
   live2d_notice_process_topic: "⏯️ 流程",
   live2d_notice_process_1: "我的 Live2D 模型插画流程与常规插画约稿相同。请查看那边列出的流程了解更多信息！",
   sketch_topic: "涂鸦约稿",
-  sketch_pricing: "¥10000 JPY",
+  sketch_pricing: "¥15000 JPY",
   sketch_desc_1: "我在 Pixiv 约稿接简单的黑白涂鸦约稿！",
   sketch_desc_2: "Pixiv 约稿有自己的一套规则、期限和流程。",
   sketch_desc_3: "更多信息请参考下方链接！",
